@@ -1,22 +1,23 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Check, ChefHat } from "lucide-react";
+import { Check } from "lucide-react";
 
 const SALADS = [
-  { id: "1", name: "Mediterranean Power Bowl", cal: 480, tags: ["High Protein"], color: "bg-emerald-100" },
-  { id: "2", name: "Asian Sesame Crunch", cal: 320, tags: ["Vegan"], color: "bg-amber-100" },
-  { id: "3", name: "Caesar Supreme", cal: 420, tags: ["Classic"], color: "bg-green-100" },
-  { id: "4", name: "Tropical Mango Bliss", cal: 290, tags: ["Vegan", "Low Cal"], color: "bg-orange-100" },
-  { id: "5", name: "Grilled Paneer Tikka", cal: 440, tags: ["Vegetarian"], color: "bg-red-100" },
-  { id: "6", name: "Greek Garden Fresh", cal: 260, tags: ["Low Cal"], color: "bg-blue-100" },
-  { id: "7", name: "Smoked Chicken & Avocado", cal: 510, tags: ["High Protein"], color: "bg-lime-100" },
-  { id: "8", name: "Beetroot & Goat Cheese", cal: 340, tags: ["Superfoods"], color: "bg-pink-100" },
-  { id: "9", name: "Thai Peanut Crunch", cal: 350, tags: ["Vegan", "Spicy"], color: "bg-yellow-100" },
-  { id: "10", name: "Quinoa Superfood Bowl", cal: 410, tags: ["Vegan", "Superfoods"], color: "bg-purple-100" },
+  { id: "1", name: "Mediterranean Power Bowl", cal: 480, tags: ["High Protein"], image: "/images/salads/mediterranean-power-bowl.jpg" },
+  { id: "2", name: "Asian Sesame Crunch", cal: 320, tags: ["Vegan"], image: "/images/salads/asian-sesame-crunch.jpg" },
+  { id: "3", name: "Caesar Supreme", cal: 420, tags: ["Classic"], image: "/images/salads/caesar-supreme.jpg" },
+  { id: "4", name: "Tropical Mango Bliss", cal: 290, tags: ["Vegan", "Low Cal"], image: "/images/salads/tropical-mango-bliss.jpg" },
+  { id: "5", name: "Grilled Paneer Tikka", cal: 440, tags: ["Vegetarian"], image: "/images/salads/grilled-paneer-tikka.jpg" },
+  { id: "6", name: "Greek Garden Fresh", cal: 260, tags: ["Low Cal"], image: "/images/salads/greek-garden-fresh.jpg" },
+  { id: "7", name: "Smoked Chicken & Avocado", cal: 510, tags: ["High Protein"], image: "/images/salads/smoked-chicken-avocado.jpg" },
+  { id: "8", name: "Beetroot & Goat Cheese", cal: 340, tags: ["Superfoods"], image: "/images/salads/beetroot-goat-cheese.jpg" },
+  { id: "9", name: "Thai Peanut Crunch", cal: 350, tags: ["Vegan", "Spicy"], image: "/images/salads/thai-peanut-crunch.jpg" },
+  { id: "10", name: "Quinoa Superfood Bowl", cal: 410, tags: ["Vegan", "Superfoods"], image: "/images/salads/quinoa-superfood-bowl.jpg" },
 ];
 
 const PLAN_DAYS: Record<string, number> = {
@@ -93,13 +94,12 @@ export default function CustomizePage() {
                   : "border-border bg-white hover:border-sage"
               }`}
             >
-              <div className={`h-16 w-16 rounded-lg ${salad.color} flex items-center justify-center shrink-0`}>
-                {isSelected ? (
-                  <div className="h-8 w-8 rounded-full bg-forest flex items-center justify-center">
-                    <Check size={16} className="text-white" />
+              <div className="h-16 w-16 rounded-lg overflow-hidden relative shrink-0">
+                <Image src={salad.image} alt={salad.name} fill className="object-cover" sizes="64px" />
+                {isSelected && (
+                  <div className="absolute inset-0 bg-forest/60 flex items-center justify-center">
+                    <Check size={20} className="text-white" />
                   </div>
-                ) : (
-                  <ChefHat size={24} className="text-forest/20" />
                 )}
               </div>
               <div className="min-w-0">

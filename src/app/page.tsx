@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { MarketingHeader } from "@/components/layout/marketing-header";
 import { MarketingFooter } from "@/components/layout/marketing-footer";
 import { Button } from "@/components/ui/button";
@@ -38,10 +39,10 @@ const PLANS_PREVIEW = [
 ];
 
 const MENU_PREVIEW = [
-  { name: "Mediterranean Power Bowl", cal: 380, tags: ["High Protein", "Keto"], color: "bg-green-100" },
-  { name: "Asian Sesame Crunch", cal: 320, tags: ["Vegan", "Gluten Free"], color: "bg-amber-100" },
-  { name: "Caesar Supreme", cal: 420, tags: ["Classic", "High Protein"], color: "bg-emerald-100" },
-  { name: "Tropical Mango Bliss", cal: 290, tags: ["Vegan", "Low Cal"], color: "bg-orange-100" },
+  { name: "Mediterranean Power Bowl", cal: 380, tags: ["High Protein", "Keto"], image: "/images/salads/mediterranean-power-bowl.jpg" },
+  { name: "Asian Sesame Crunch", cal: 320, tags: ["Vegan", "Gluten Free"], image: "/images/salads/asian-sesame-crunch.jpg" },
+  { name: "Caesar Supreme", cal: 420, tags: ["Classic", "High Protein"], image: "/images/salads/caesar-supreme.jpg" },
+  { name: "Tropical Mango Bliss", cal: 290, tags: ["Vegan", "Low Cal"], image: "/images/salads/tropical-mango-bliss.jpg" },
 ];
 
 export default function HomePage() {
@@ -116,9 +117,9 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
               {MENU_PREVIEW.map((item) => (
-                <div key={item.name} className="rounded-xl bg-white border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
-                  <div className={`h-40 ${item.color} flex items-center justify-center`}>
-                    <ChefHat size={48} className="text-forest/20" />
+                <div key={item.name} className="rounded-xl bg-white border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
+                  <div className="h-40 relative bg-muted overflow-hidden">
+                    <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
                   </div>
                   <div className="p-4">
                     <h3 className="font-semibold text-foreground">{item.name}</h3>

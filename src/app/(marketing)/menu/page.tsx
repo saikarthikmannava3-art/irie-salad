@@ -1,7 +1,8 @@
 "use client";
 
 import { useState } from "react";
-import { ChefHat, Flame, Leaf, Search } from "lucide-react";
+import Image from "next/image";
+import { Flame, Leaf, Search } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import Link from "next/link";
@@ -14,61 +15,61 @@ const SALADS = [
     id: "1", name: "Mediterranean Power Bowl", slug: "mediterranean-power-bowl",
     category: "Protein Bowls", description: "Grilled chicken, quinoa, roasted veggies, feta, olives, lemon herb dressing",
     price: 349, calories: 480, protein: 32, fiber: 8,
-    tags: ["High Protein", "Gluten Free"], color: "bg-emerald-100",
+    tags: ["High Protein", "Gluten Free"], image: "/images/salads/mediterranean-power-bowl.jpg",
   },
   {
     id: "2", name: "Asian Sesame Crunch", slug: "asian-sesame-crunch",
     category: "Signature Salads", description: "Edamame, purple cabbage, mandarin, crispy wontons, sesame ginger dressing",
     price: 299, calories: 320, protein: 14, fiber: 6,
-    tags: ["Vegan", "Crunchy"], color: "bg-amber-100",
+    tags: ["Vegan", "Crunchy"], image: "/images/salads/asian-sesame-crunch.jpg",
   },
   {
     id: "3", name: "Caesar Supreme", slug: "caesar-supreme",
     category: "Signature Salads", description: "Romaine, parmesan crisps, grilled chicken, house-made caesar dressing",
     price: 329, calories: 420, protein: 28, fiber: 4,
-    tags: ["Classic", "High Protein"], color: "bg-green-100",
+    tags: ["Classic", "High Protein"], image: "/images/salads/caesar-supreme.jpg",
   },
   {
     id: "4", name: "Tropical Mango Bliss", slug: "tropical-mango-bliss",
     category: "Light & Fresh", description: "Mango, avocado, cherry tomatoes, microgreens, citrus vinaigrette",
     price: 279, calories: 290, protein: 8, fiber: 7,
-    tags: ["Vegan", "Low Cal"], color: "bg-orange-100",
+    tags: ["Vegan", "Low Cal"], image: "/images/salads/tropical-mango-bliss.jpg",
   },
   {
     id: "5", name: "Grilled Paneer Tikka Bowl", slug: "grilled-paneer-tikka",
     category: "Protein Bowls", description: "Tandoori paneer, chickpeas, cucumber raita, mint chutney dressing",
     price: 349, calories: 440, protein: 24, fiber: 9,
-    tags: ["Vegetarian", "Indian"], color: "bg-red-100",
+    tags: ["Vegetarian", "Indian"], image: "/images/salads/grilled-paneer-tikka.jpg",
   },
   {
     id: "6", name: "Greek Garden Fresh", slug: "greek-garden-fresh",
     category: "Light & Fresh", description: "Cucumber, tomato, bell pepper, olives, feta, oregano vinaigrette",
     price: 269, calories: 260, protein: 10, fiber: 5,
-    tags: ["Vegetarian", "Low Cal"], color: "bg-blue-100",
+    tags: ["Vegetarian", "Low Cal"], image: "/images/salads/greek-garden-fresh.jpg",
   },
   {
     id: "7", name: "Smoked Chicken & Avocado", slug: "smoked-chicken-avocado",
     category: "Protein Bowls", description: "Smoked chicken breast, avocado, corn, black beans, chipotle ranch",
     price: 379, calories: 510, protein: 36, fiber: 10,
-    tags: ["High Protein", "Keto Friendly"], color: "bg-lime-100",
+    tags: ["High Protein", "Keto Friendly"], image: "/images/salads/smoked-chicken-avocado.jpg",
   },
   {
     id: "8", name: "Beetroot & Goat Cheese", slug: "beetroot-goat-cheese",
     category: "Signature Salads", description: "Roasted beetroot, goat cheese, walnuts, arugula, balsamic reduction",
     price: 319, calories: 340, protein: 12, fiber: 6,
-    tags: ["Vegetarian", "Superfoods"], color: "bg-pink-100",
+    tags: ["Vegetarian", "Superfoods"], image: "/images/salads/beetroot-goat-cheese.jpg",
   },
   {
     id: "9", name: "Thai Peanut Crunch", slug: "thai-peanut-crunch",
     category: "Signature Salads", description: "Shredded cabbage, carrots, peanuts, cilantro, spicy peanut dressing",
     price: 289, calories: 350, protein: 14, fiber: 7,
-    tags: ["Vegan", "Spicy"], color: "bg-yellow-100",
+    tags: ["Vegan", "Spicy"], image: "/images/salads/thai-peanut-crunch.jpg",
   },
   {
     id: "10", name: "Quinoa Superfood Bowl", slug: "quinoa-superfood-bowl",
     category: "Protein Bowls", description: "Tricolor quinoa, kale, sweet potato, pomegranate, tahini dressing",
     price: 359, calories: 410, protein: 18, fiber: 12,
-    tags: ["Vegan", "Superfoods"], color: "bg-purple-100",
+    tags: ["Vegan", "Superfoods"], image: "/images/salads/quinoa-superfood-bowl.jpg",
   },
 ];
 
@@ -123,10 +124,10 @@ export default function MenuPage() {
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {filtered.map((salad) => (
           <div key={salad.id} className="group rounded-xl bg-white border border-border overflow-hidden shadow-sm hover:shadow-md transition-all">
-            <div className={`h-48 ${salad.color} flex items-center justify-center relative`}>
-              <ChefHat size={56} className="text-forest/15" />
-              <div className="absolute top-3 right-3">
-                <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-forest">
+            <div className="h-48 relative bg-muted overflow-hidden">
+              <Image src={salad.image} alt={salad.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" />
+              <div className="absolute top-3 right-3 z-10">
+                <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-forest shadow-sm">
                   Rs.{salad.price}
                 </span>
               </div>
