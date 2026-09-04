@@ -10,10 +10,10 @@ export default function SuccessPage() {
       </div>
 
       <h1 className="text-3xl font-bold text-forest mb-2">
-        Welcome to Irie Salad!
+        Welcome to IRIE Kitchen!
       </h1>
       <p className="text-lg text-muted-foreground mb-8">
-        Your subscription is active. Get ready for fresh, healthy meals!
+        Your subscription is active. Get ready for fresh Indian meals!
       </p>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 max-w-md mx-auto mb-8">

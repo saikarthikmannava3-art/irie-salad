@@ -1,33 +1,39 @@
 "use client";
 
-import { Card, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { DataTable } from "@/components/ui/data-table";
 import { Plus } from "lucide-react";
+import { PRODUCTS } from "@/data/products";
+import { getStartingPrice } from "@/data/pricing";
 
-const MENU_ITEMS = [
-  { id: "1", name: "Mediterranean Power Bowl", category: "Protein Bowls", price: 349, calories: 480, status: "active", orders: 28 },
-  { id: "2", name: "Asian Sesame Crunch", category: "Signature Salads", price: 299, calories: 320, status: "active", orders: 22 },
-  { id: "3", name: "Caesar Supreme", category: "Signature Salads", price: 329, calories: 420, status: "active", orders: 24 },
-  { id: "4", name: "Tropical Mango Bliss", category: "Light & Fresh", price: 279, calories: 290, status: "active", orders: 8 },
-  { id: "5", name: "Grilled Paneer Tikka", category: "Protein Bowls", price: 349, calories: 440, status: "active", orders: 20 },
-  { id: "6", name: "Greek Garden Fresh", category: "Light & Fresh", price: 269, calories: 260, status: "active", orders: 12 },
-  { id: "7", name: "Smoked Chicken & Avocado", category: "Protein Bowls", price: 379, calories: 510, status: "active", orders: 4 },
-  { id: "8", name: "Beetroot & Goat Cheese", category: "Signature Salads", price: 319, calories: 340, status: "active", orders: 2 },
-  { id: "9", name: "Thai Peanut Crunch", category: "Signature Salads", price: 289, calories: 350, status: "active", orders: 2 },
-  { id: "10", name: "Quinoa Superfood Bowl", category: "Protein Bowls", price: 359, calories: 410, status: "active", orders: 16 },
-];
+const MENU_ITEMS = PRODUCTS.map((p) => ({
+  id: p.id,
+  name: p.name,
+  category: p.category,
+  price: getStartingPrice(p.slug),
+  calories: p.nutrition.calories,
+  variants: p.variants.length,
+  hasDailyMenu: p.hasDailyMenu,
+  status: p.isActive ? "active" : "inactive",
+  orders: [42, 18, 28, 14, 22, 10, 8][PRODUCTS.indexOf(p)] || 0,
+}));
 
 export default function OpsMenuPage() {
   const columns = [
     { key: "name", header: "Item", render: (row: typeof MENU_ITEMS[0]) => (
-      <span className="font-medium">{row.name}</span>
+      <div>
+        <span className="font-medium">{row.name}</span>
+        {row.hasDailyMenu && (
+          <Badge variant="outline" className="ml-2 text-[9px]">Daily Menu</Badge>
+        )}
+      </div>
     )},
     { key: "category", header: "Category", render: (row: typeof MENU_ITEMS[0]) => (
       <Badge variant="outline">{row.category}</Badge>
     )},
-    { key: "price", header: "Price", className: "text-right", render: (row: typeof MENU_ITEMS[0]) => (
+    { key: "variants", header: "Variants", className: "text-center" },
+    { key: "price", header: "From", className: "text-right", render: (row: typeof MENU_ITEMS[0]) => (
       <span>Rs.{row.price}</span>
     )},
     { key: "calories", header: "Cal", className: "text-right" },
@@ -45,7 +51,7 @@ export default function OpsMenuPage() {
       <div className="flex items-center justify-between">
         <div>
           <h1 className="text-2xl font-bold text-foreground">Menu Management</h1>
-          <p className="text-muted-foreground">{MENU_ITEMS.length} active items</p>
+          <p className="text-muted-foreground">{MENU_ITEMS.length} products in catalog</p>
         </div>
         <Button size="sm"><Plus size={16} /> Add Item</Button>
       </div>

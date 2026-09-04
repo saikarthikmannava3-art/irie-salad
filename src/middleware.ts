@@ -14,7 +14,7 @@ export async function middleware(request: NextRequest) {
     return NextResponse.next();
   }
 
-  // Public paths — no auth needed
+  // Public paths, no auth needed
   if (PUBLIC_PATHS.some((p) => pathname === p || pathname.startsWith(p + "/"))) {
     const { supabaseResponse } = await updateSession(request);
     return supabaseResponse;
@@ -28,7 +28,7 @@ export async function middleware(request: NextRequest) {
   try {
     const { user, supabaseResponse } = await updateSession(request);
 
-    // Not logged in — redirect to login
+    // Not logged in, redirect to login
     if (!user) {
       const url = request.nextUrl.clone();
       url.pathname = "/login";
@@ -38,7 +38,7 @@ export async function middleware(request: NextRequest) {
 
     return supabaseResponse;
   } catch {
-    // Supabase connection failed — allow through for POC
+    // Supabase connection failed, allow through
     return NextResponse.next();
   }
 }

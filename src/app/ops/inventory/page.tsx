@@ -10,21 +10,21 @@ import { Package, AlertTriangle, TrendingDown, Plus, Search } from "lucide-react
 import Link from "next/link";
 
 const INVENTORY = [
-  { id: "1", ingredient: "Baby Spinach", sku: "ING-VEG-001", category: "Leafy Greens", qty: 2.1, unit: "kg", reorder: 5.0, storage: "refrigerated", lastRestocked: "2026-08-10" },
-  { id: "2", ingredient: "Romaine Lettuce", sku: "ING-VEG-002", category: "Leafy Greens", qty: 6.0, unit: "kg", reorder: 4.0, storage: "refrigerated", lastRestocked: "2026-08-10" },
-  { id: "3", ingredient: "Chicken Breast", sku: "ING-PRO-001", category: "Protein", qty: 10.0, unit: "kg", reorder: 8.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
-  { id: "4", ingredient: "Quinoa", sku: "ING-GRN-001", category: "Grains", qty: 1.5, unit: "kg", reorder: 3.0, storage: "ambient", lastRestocked: "2026-08-09" },
-  { id: "5", ingredient: "Feta Cheese", sku: "ING-DAI-001", category: "Dairy", qty: 0.5, unit: "kg", reorder: 2.0, storage: "refrigerated", lastRestocked: "2026-08-09" },
-  { id: "6", ingredient: "Cherry Tomatoes", sku: "ING-VEG-003", category: "Vegetables", qty: 4.0, unit: "kg", reorder: 3.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
-  { id: "7", ingredient: "Cucumber", sku: "ING-VEG-004", category: "Vegetables", qty: 3.0, unit: "kg", reorder: 2.5, storage: "refrigerated", lastRestocked: "2026-08-11" },
-  { id: "8", ingredient: "Olives", sku: "ING-PRE-001", category: "Preserved", qty: 2.0, unit: "kg", reorder: 1.0, storage: "ambient", lastRestocked: "2026-08-08" },
-  { id: "9", ingredient: "Paneer", sku: "ING-DAI-002", category: "Dairy", qty: 4.5, unit: "kg", reorder: 4.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
-  { id: "10", ingredient: "Avocado", sku: "ING-FRT-001", category: "Fruits", qty: 2.0, unit: "kg", reorder: 1.5, storage: "refrigerated", lastRestocked: "2026-08-10" },
-  { id: "11", ingredient: "Edamame", sku: "ING-VEG-005", category: "Vegetables", qty: 3.0, unit: "kg", reorder: 2.0, storage: "frozen", lastRestocked: "2026-08-09" },
-  { id: "12", ingredient: "Bell Pepper", sku: "ING-VEG-006", category: "Vegetables", qty: 2.5, unit: "kg", reorder: 2.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
-  { id: "13", ingredient: "Beetroot", sku: "ING-VEG-007", category: "Vegetables", qty: 1.0, unit: "kg", reorder: 0.5, storage: "refrigerated", lastRestocked: "2026-08-10" },
-  { id: "14", ingredient: "Mango", sku: "ING-FRT-002", category: "Fruits", qty: 2.0, unit: "kg", reorder: 1.5, storage: "refrigerated", lastRestocked: "2026-08-11" },
-  { id: "15", ingredient: "Sweet Potato", sku: "ING-VEG-008", category: "Vegetables", qty: 2.0, unit: "kg", reorder: 1.5, storage: "ambient", lastRestocked: "2026-08-10" },
+  { id: "1", ingredient: "Organic Tofu", sku: "ING-PRO-001", category: "Protein", qty: 4.5, unit: "kg", reorder: 4.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
+  { id: "2", ingredient: "Paneer", sku: "ING-PRO-002", category: "Protein", qty: 4.5, unit: "kg", reorder: 4.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
+  { id: "3", ingredient: "Mixed Greens", sku: "ING-VEG-001", category: "Leafy Greens", qty: 6.0, unit: "kg", reorder: 5.0, storage: "refrigerated", lastRestocked: "2026-08-10" },
+  { id: "4", ingredient: "Cherry Tomatoes", sku: "ING-VEG-002", category: "Vegetables", qty: 4.0, unit: "kg", reorder: 3.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
+  { id: "5", ingredient: "Cucumber", sku: "ING-VEG-003", category: "Vegetables", qty: 3.0, unit: "kg", reorder: 2.5, storage: "refrigerated", lastRestocked: "2026-08-11" },
+  { id: "6", ingredient: "Bell Pepper", sku: "ING-VEG-004", category: "Vegetables", qty: 2.5, unit: "kg", reorder: 2.0, storage: "refrigerated", lastRestocked: "2026-08-11" },
+  { id: "7", ingredient: "Avocado", sku: "ING-FRT-001", category: "Fruits", qty: 2.0, unit: "kg", reorder: 1.5, storage: "refrigerated", lastRestocked: "2026-08-10" },
+  { id: "8", ingredient: "Coconut Milk", sku: "ING-DAI-001", category: "Dairy", qty: 3.0, unit: "L", reorder: 2.0, storage: "refrigerated", lastRestocked: "2026-08-10" },
+  { id: "9", ingredient: "Rolled Oats", sku: "ING-GRN-001", category: "Grains", qty: 5.0, unit: "kg", reorder: 3.0, storage: "ambient", lastRestocked: "2026-08-09" },
+  { id: "10", ingredient: "Seasonal Fruits", sku: "ING-FRT-002", category: "Fruits", qty: 4.0, unit: "kg", reorder: 2.5, storage: "refrigerated", lastRestocked: "2026-08-11" },
+  { id: "11", ingredient: "Ragi Flour", sku: "ING-GRN-002", category: "Grains", qty: 2.5, unit: "kg", reorder: 2.0, storage: "ambient", lastRestocked: "2026-08-09" },
+  { id: "12", ingredient: "Foxtail Millet", sku: "ING-GRN-003", category: "Grains", qty: 2.0, unit: "kg", reorder: 1.5, storage: "ambient", lastRestocked: "2026-08-09" },
+  { id: "13", ingredient: "Seeds Mix", sku: "ING-NUT-001", category: "Nuts & Seeds", qty: 1.5, unit: "kg", reorder: 1.0, storage: "ambient", lastRestocked: "2026-08-08" },
+  { id: "14", ingredient: "Brown Rice", sku: "ING-GRN-004", category: "Grains", qty: 3.0, unit: "kg", reorder: 2.0, storage: "ambient", lastRestocked: "2026-08-09" },
+  { id: "15", ingredient: "Fresh Herbs", sku: "ING-HRB-001", category: "Herbs", qty: 0.8, unit: "kg", reorder: 0.5, storage: "refrigerated", lastRestocked: "2026-08-11" },
 ];
 
 export default function InventoryPage() {

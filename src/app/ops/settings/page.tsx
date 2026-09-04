@@ -14,8 +14,8 @@ export default function SettingsPage() {
         <CardTitle className="mb-4">Organization</CardTitle>
         <div className="space-y-4 max-w-md">
           <Input label="Organization Name" defaultValue="Irie Foods Pvt Ltd" />
-          <Input label="Brand Name" defaultValue="Irie Salad" />
-          <Input label="Support Email" defaultValue="help@iriesalad.com" />
+          <Input label="Brand Name" defaultValue="IRIE Kitchen" />
+          <Input label="Support Email" defaultValue="help@iriekitchen.com" />
           <Input label="Support Phone" defaultValue="+91 98765 43210" />
           <Button size="sm">Save</Button>
         </div>

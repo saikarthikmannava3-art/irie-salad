@@ -1,53 +1,63 @@
+import type { Metadata } from "next";
 import Link from "next/link";
-import Image from "next/image";
 import { MarketingHeader } from "@/components/layout/marketing-header";
 import { MarketingFooter } from "@/components/layout/marketing-footer";
 import { Button } from "@/components/ui/button";
-import { Leaf, Truck, Calendar, Heart, ChefHat, Zap } from "lucide-react";
+import { OrganizationJsonLd } from "@/components/structured-data";
+import { Truck, Calendar, Heart, ChefHat, Zap, Snowflake, UtensilsCrossed } from "lucide-react";
+
+export const metadata: Metadata = {
+  title: "IRIE Kitchen | Indian Food. Made Better.",
+  description:
+    "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at Rs.97/meal.",
+  alternates: { canonical: "https://iriekitchen.in" },
+};
 
 const STEPS = [
-  { icon: Calendar, title: "Choose Your Plan", desc: "Pick a trial, 12, 24, or 48-day plan that fits your lifestyle." },
-  { icon: ChefHat, title: "Pick Your Salads", desc: "Customize your daily meals from our chef-crafted menu." },
-  { icon: Truck, title: "We Deliver Fresh", desc: "Freshly made salads delivered to your door every day." },
+  { icon: Calendar, title: "Choose Your Meals", desc: "Pick meals for breakfast, lunch, snack and dinner." },
+  { icon: ChefHat, title: "We Cook Fresh", desc: "Prepared daily using traditional Indian techniques." },
+  { icon: Snowflake, title: "Rapid Chill & Pack", desc: "Meals chilled for freshness, packed with care." },
+  { icon: Truck, title: "Delivered to You", desc: "Morning and evening deliveries. Reheat and enjoy." },
 ];
 
 const PLANS_PREVIEW = [
   {
     name: "Trial",
     days: 3,
-    price: 599,
-    perMeal: 199,
-    features: ["3 fresh salads", "Free delivery", "No commitment"],
+    price: 747,
+    perMeal: 249,
+    features: ["3 fresh meals", "Free delivery", "No commitment"],
     popular: false,
   },
   {
     name: "12-Day Plan",
     days: 12,
-    price: 3999,
-    perMeal: 333,
-    features: ["12 fresh salads", "Free delivery", "Pause anytime", "Custom menu"],
+    price: 2688,
+    perMeal: 224,
+    features: ["12 fresh meals", "Free delivery", "Pause anytime", "Custom basket"],
     popular: true,
   },
   {
     name: "24-Day Plan",
     days: 24,
-    price: 6999,
-    perMeal: 291,
-    features: ["24 fresh salads", "Free delivery", "Pause anytime", "Custom menu", "Priority support"],
+    price: 4776,
+    perMeal: 199,
+    features: ["24 fresh meals", "Free delivery", "Pause anytime", "Custom basket", "Priority support"],
     popular: false,
   },
 ];
 
-const MENU_PREVIEW = [
-  { name: "Mediterranean Power Bowl", cal: 380, tags: ["High Protein", "Keto"], image: "/images/salads/mediterranean-power-bowl.jpg" },
-  { name: "Asian Sesame Crunch", cal: 320, tags: ["Vegan", "Gluten Free"], image: "/images/salads/asian-sesame-crunch.jpg" },
-  { name: "Caesar Supreme", cal: 420, tags: ["Classic", "High Protein"], image: "/images/salads/caesar-supreme.jpg" },
-  { name: "Tropical Mango Bliss", cal: 290, tags: ["Vegan", "Low Cal"], image: "/images/salads/tropical-mango-bliss.jpg" },
+const MEAL_OCCASIONS = [
+  { name: "Breakfast", from: "Rs.112", image: "/images/products/coconut-overnight-oats.jpg" },
+  { name: "Lunch", from: "Rs.187", image: "/images/salads/mediterranean-power-bowl.jpg" },
+  { name: "Evening Snack", from: "Rs.97", image: "/images/products/tropical-smoothie-bowl.jpg" },
+  { name: "Dinner", from: "Rs.165", image: "/images/products/irie-millet-wellness-bowl.jpg" },
 ];
 
 export default function HomePage() {
   return (
     <>
+      <OrganizationJsonLd />
       <MarketingHeader />
       <main className="flex-1">
         {/* Hero */}
@@ -55,21 +65,21 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <div className="mx-auto max-w-3xl text-center">
               <div className="mb-6 inline-flex items-center gap-2 rounded-full bg-forest/10 px-4 py-1.5 text-sm font-medium text-forest">
-                <Leaf size={16} />
-                Farm to Fork, Every Day
+                <UtensilsCrossed size={16} />
+                Indian Food. Made Better.
               </div>
               <h1 className="text-4xl font-bold tracking-tight text-forest sm:text-5xl lg:text-6xl">
-                Fresh Salads,{" "}
-                <span className="text-mustard">Delivered Daily</span>
+                Indian Food.{" "}
+                <span className="text-mustard">Made Better.</span>
               </h1>
               <p className="mt-6 text-lg text-earth/70 leading-relaxed">
-                Premium subscription salads made fresh every morning in our kitchen.
-                Nutrition-led, chef-crafted meals that make healthy eating effortless.
+                Fresh Indian meals for breakfast, lunch, snacks and dinner. Prepared with
+                ancient wisdom and modern nutrition. Delivered daily in Hyderabad.
               </p>
               <div className="mt-8 flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Link href="/subscribe">
                   <Button size="lg" className="text-base px-8">
-                    Start Your Plan
+                    Start My Subscription
                   </Button>
                 </Link>
                 <Link href="/menu">
@@ -79,7 +89,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
-                Starting at just Rs.199/meal. Cancel anytime.
+                Starting at Rs.97/meal. Pause anytime.
               </p>
             </div>
           </div>
@@ -91,9 +101,9 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-forest">How It Works</h2>
-              <p className="mt-3 text-muted-foreground">Three simple steps to a healthier you</p>
+              <p className="mt-3 text-muted-foreground">Four simple steps to better Indian food every day</p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
               {STEPS.map((step, i) => (
                 <div key={i} className="text-center">
                   <div className="mx-auto mb-4 flex h-16 w-16 items-center justify-center rounded-2xl bg-cream text-forest">
@@ -112,27 +122,26 @@ export default function HomePage() {
         <section className="py-20 bg-cream/50">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
-              <h2 className="text-3xl font-bold text-forest">Chef-Crafted Menu</h2>
-              <p className="mt-3 text-muted-foreground">Fresh ingredients, bold flavors, perfect nutrition</p>
+              <h2 className="text-3xl font-bold text-forest">Your Complete Day, Covered</h2>
+              <p className="mt-3 text-muted-foreground">Fresh Indian meals for every occasion</p>
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-              {MENU_PREVIEW.map((item) => (
-                <div key={item.name} className="rounded-xl bg-white border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow group">
-                  <div className="h-40 relative bg-muted overflow-hidden">
-                    <Image src={item.image} alt={item.name} fill className="object-cover group-hover:scale-105 transition-transform duration-300" sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 25vw" />
-                  </div>
-                  <div className="p-4">
-                    <h3 className="font-semibold text-foreground">{item.name}</h3>
-                    <p className="mt-1 text-sm text-muted-foreground">{item.cal} cal</p>
-                    <div className="mt-3 flex flex-wrap gap-1">
-                      {item.tags.map((tag) => (
-                        <span key={tag} className="rounded-full bg-forest/10 px-2 py-0.5 text-xs font-medium text-forest">
-                          {tag}
-                        </span>
-                      ))}
+              {MEAL_OCCASIONS.map((occasion) => (
+                <Link key={occasion.name} href="/menu" className="group">
+                  <div className="rounded-xl bg-white border border-border overflow-hidden shadow-sm hover:shadow-md transition-shadow">
+                    <div className="h-40 relative bg-muted overflow-hidden">
+                      <img
+                        src={occasion.image}
+                        alt={`${occasion.name} meals by IRIE Kitchen`}
+                        className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                      />
+                    </div>
+                    <div className="p-4 text-center">
+                      <h3 className="font-semibold text-foreground text-lg">{occasion.name}</h3>
+                      <p className="mt-1 text-sm text-forest font-medium">From {occasion.from}</p>
                     </div>
                   </div>
-                </div>
+                </Link>
               ))}
             </div>
             <div className="mt-10 text-center">
@@ -148,7 +157,7 @@ export default function HomePage() {
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold text-forest">Simple, Flexible Plans</h2>
-              <p className="mt-3 text-muted-foreground">Choose what works for you. Pause or cancel anytime.</p>
+              <p className="mt-3 text-muted-foreground">Choose what works for you. Pause anytime.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
               {PLANS_PREVIEW.map((plan) => (
@@ -202,14 +211,14 @@ export default function HomePage() {
         <section className="bg-forest py-16">
           <div className="mx-auto max-w-3xl text-center px-4">
             <Zap size={32} className="mx-auto text-mustard mb-4" />
-            <h2 className="text-3xl font-bold text-white">Ready to eat healthier?</h2>
+            <h2 className="text-3xl font-bold text-white">Ready for better Indian food?</h2>
             <p className="mt-3 text-white/70">
-              Join hundreds of health-conscious people who trust Irie Salad for their daily nutrition.
+              Join hundreds who trust IRIE Kitchen for their daily nutrition.
             </p>
             <div className="mt-8">
               <Link href="/subscribe">
                 <Button size="lg" className="bg-mustard text-white hover:bg-mustard-light text-base px-8">
-                  Start Your Free Trial
+                  Start My Subscription
                 </Button>
               </Link>
             </div>

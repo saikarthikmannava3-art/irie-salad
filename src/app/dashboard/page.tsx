@@ -1,7 +1,8 @@
 import { Card, CardTitle } from "@/components/ui/card";
 import { StatusBadge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
-import { Calendar, Salad, Clock, ArrowRight } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Calendar, UtensilsCrossed, Clock, ArrowRight, Sun, Moon } from "lucide-react";
 import Link from "next/link";
 
 // Demo data
@@ -15,10 +16,10 @@ const SUBSCRIPTION = {
 };
 
 const UPCOMING_ORDERS = [
-  { id: "1", date: "2026-08-12", salad: "Mediterranean Power Bowl", status: "scheduled" },
-  { id: "2", date: "2026-08-13", salad: "Asian Sesame Crunch", status: "scheduled" },
-  { id: "3", date: "2026-08-14", salad: "Caesar Supreme", status: "scheduled" },
-  { id: "4", date: "2026-08-15", salad: "Tropical Mango Bliss", status: "scheduled" },
+  { id: "1", date: "2026-08-12", meal: "Masala Dosa with Chutneys", occasion: "Breakfast", window: "morning", status: "scheduled" },
+  { id: "2", date: "2026-08-12", meal: "Roti Sabzi Thali", occasion: "Lunch", window: "morning", status: "scheduled" },
+  { id: "3", date: "2026-08-12", meal: "Chana Sundal", occasion: "Evening Snack", window: "evening", status: "scheduled" },
+  { id: "4", date: "2026-08-12", meal: "Light Moong Dal Khichdi", occasion: "Dinner", window: "evening", status: "scheduled" },
 ];
 
 export default function DashboardPage() {
@@ -62,7 +63,7 @@ export default function DashboardPage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
         {[
           { label: "Skip a Day", icon: Calendar, href: "/dashboard/subscription" },
-          { label: "Swap Salad", icon: Salad, href: "/dashboard/orders" },
+          { label: "Swap Meal", icon: UtensilsCrossed, href: "/dashboard/orders" },
           { label: "Pause Plan", icon: Clock, href: "/dashboard/subscription" },
           { label: "Order History", icon: ArrowRight, href: "/dashboard/orders" },
         ].map((action) => (
@@ -85,19 +86,23 @@ export default function DashboardPage() {
         </div>
         <div className="space-y-3">
           {UPCOMING_ORDERS.map((order) => (
-            <Card key={order.id} className="flex items-center justify-between py-4">
+            <Card key={order.id} className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 py-4">
               <div className="flex items-center gap-4">
-                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream text-forest font-bold text-sm">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-cream text-forest font-bold text-sm shrink-0">
                   {new Date(order.date).getDate()}
                 </div>
-                <div>
-                  <p className="font-medium text-foreground">{order.salad}</p>
-                  <p className="text-sm text-muted-foreground">
-                    {new Date(order.date).toLocaleDateString("en-IN", { weekday: "long", month: "short", day: "numeric" })}
-                  </p>
+                <div className="min-w-0">
+                  <p className="font-medium text-foreground truncate">{order.meal}</p>
+                  <div className="flex items-center gap-2 mt-0.5 flex-wrap">
+                    <Badge variant="outline" className="text-xs">{order.occasion}</Badge>
+                    <Badge variant={order.window === "morning" ? "warning" : "info"} className="text-xs">
+                      {order.window === "morning" ? <Sun size={10} /> : <Moon size={10} />}
+                      {order.window === "morning" ? "Morning" : "Evening"}
+                    </Badge>
+                  </div>
                 </div>
               </div>
-              <div className="flex items-center gap-3">
+              <div className="flex items-center gap-3 shrink-0">
                 <StatusBadge status={order.status} />
                 <Button variant="ghost" size="sm">Swap</Button>
               </div>
@@ -107,14 +112,21 @@ export default function DashboardPage() {
       </div>
 
       {/* Cutoff Notice */}
-      <div className="rounded-lg bg-mustard/10 border border-mustard/30 p-4 text-sm">
+      <div className="rounded-lg bg-mustard/10 border border-mustard/30 p-4 text-sm space-y-2">
         <p className="font-medium text-earth">
           <Clock size={14} className="inline mr-1" />
-          Daily cutoff: 6:00 PM
+          Dual Cutoff Times
         </p>
-        <p className="text-muted-foreground mt-1">
-          Changes to tomorrow&apos;s order must be made before 6 PM today.
-        </p>
+        <div className="flex flex-col gap-1 text-muted-foreground">
+          <p>
+            <Sun size={12} className="inline mr-1 text-mustard" />
+            <strong>Morning delivery</strong> (breakfast &amp; lunch): order by 6:00 PM the previous evening.
+          </p>
+          <p>
+            <Moon size={12} className="inline mr-1 text-indigo-500" />
+            <strong>Evening delivery</strong> (snack &amp; dinner): order by 10:00 AM the same day.
+          </p>
+        </div>
       </div>
     </div>
   );

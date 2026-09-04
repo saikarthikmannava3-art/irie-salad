@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import { OpsSidebar } from "@/components/layout/ops-sidebar";
+
+export const metadata: Metadata = {
+  title: "Operations | IRIE Kitchen",
+  robots: { index: false, follow: false },
+};
 
 export default function OpsLayout({ children }: { children: React.ReactNode }) {
   return (

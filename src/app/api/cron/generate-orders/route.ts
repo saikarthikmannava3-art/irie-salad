@@ -61,7 +61,7 @@ export async function GET(request: Request) {
       const menuItemId = menuItems[itemIndex].id;
 
       // Generate order number
-      const orderNo = `ORD-BLR-${deliveryDate.replace(/-/g, "")}-${String(created + 1).padStart(4, "0")}`;
+      const orderNo = `ORD-HYD-${deliveryDate.replace(/-/g, "")}-${String(created + 1).padStart(4, "0")}`;
 
       const { error } = await supabase.from("orders").insert({
         order_no: orderNo,

@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Card, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { StatusBadge } from "@/components/ui/badge";
-import { Pause, Play, Calendar, AlertTriangle } from "lucide-react";
+import { Pause, Play } from "lucide-react";
 
 export default function SubscriptionPage() {
   const [paused, setPaused] = useState(false);
@@ -72,7 +72,7 @@ export default function SubscriptionPage() {
       <Card>
         <CardTitle className="mb-1">Skip Individual Days</CardTitle>
         <p className="text-sm text-muted-foreground mb-4">
-          Tap to skip/unskip. Skipped days are added back to your plan.
+          Tap to skip/unskip. Skipped days are added back to your plan. Skip before the cutoff: 6 PM (previous day) for morning delivery, or 10 AM (same day) for evening delivery.
         </p>
         <div className="grid grid-cols-3 sm:grid-cols-5 gap-2">
           {upcomingDates.map((date) => {
@@ -99,20 +99,12 @@ export default function SubscriptionPage() {
         </div>
       </Card>
 
-      {/* Danger Zone */}
-      <Card className="border-danger/30">
-        <div className="flex items-start gap-3">
-          <AlertTriangle size={20} className="text-danger shrink-0 mt-0.5" />
-          <div>
-            <CardTitle className="text-danger">Cancel Subscription</CardTitle>
-            <p className="text-sm text-muted-foreground mt-1">
-              Cancelling is permanent. Remaining meals will be refunded to your wallet.
-            </p>
-            <Button variant="danger" size="sm" className="mt-3">
-              Cancel Subscription
-            </Button>
-          </div>
-        </div>
+      {/* Support Note */}
+      <Card className="border-border">
+        <CardTitle className="mb-2">Need to Cancel?</CardTitle>
+        <p className="text-sm text-muted-foreground">
+          To cancel your subscription, please contact support. We're here to help with any questions or concerns.
+        </p>
       </Card>
     </div>
   );

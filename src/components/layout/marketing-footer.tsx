@@ -21,8 +21,10 @@ export function MarketingFooter() {
           <div>
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50">Menu</h4>
             <ul className="mt-3 space-y-2">
-              <li><Link href="/menu" className="text-sm text-white/70 hover:text-white">Our Salads</Link></li>
-              <li><Link href="/plans" className="text-sm text-white/70 hover:text-white">Plans & Pricing</Link></li>
+              <li><Link href="/menu" className="text-sm text-white/70 hover:text-white">Our Menu</Link></li>
+              <li><Link href="/plans" className="text-sm text-white/70 hover:text-white">Subscriptions</Link></li>
+              <li><Link href="/how-it-works" className="text-sm text-white/70 hover:text-white">How It Works</Link></li>
+              <li><Link href="/food-standard" className="text-sm text-white/70 hover:text-white">Our Food Standard</Link></li>
               <li><Link href="/about" className="text-sm text-white/70 hover:text-white">About Us</Link></li>
             </ul>
           </div>
@@ -32,7 +34,7 @@ export function MarketingFooter() {
             <h4 className="text-sm font-semibold uppercase tracking-wider text-white/50">Support</h4>
             <ul className="mt-3 space-y-2">
               <li><Link href="/dashboard" className="text-sm text-white/70 hover:text-white">My Account</Link></li>
-              <li><span className="text-sm text-white/70">help@iriesalad.com</span></li>
+              <li><span className="text-sm text-white/70">help@iriekitchen.com</span></li>
               <li><span className="text-sm text-white/70">+91 98765 43210</span></li>
             </ul>
           </div>

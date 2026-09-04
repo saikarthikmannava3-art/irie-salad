@@ -1,4 +1,10 @@
+import type { Metadata } from "next";
 import { MarketingHeader } from "@/components/layout/marketing-header";
+
+export const metadata: Metadata = {
+  title: "Subscribe | IRIE Kitchen",
+  robots: { index: false, follow: false },
+};
 
 export default function SubscribeLayout({ children }: { children: React.ReactNode }) {
   return (

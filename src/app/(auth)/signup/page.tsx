@@ -17,7 +17,7 @@ export default function SignupPage() {
     e.preventDefault();
     setLoading(true);
 
-    // POC: Demo signup — redirect to dashboard
+    // Demo signup, redirect to dashboard
     setTimeout(() => {
       window.location.href = "/dashboard";
       setLoading(false);

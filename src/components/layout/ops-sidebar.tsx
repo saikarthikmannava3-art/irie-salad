@@ -4,29 +4,20 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import {
   LayoutDashboard, ShoppingBag, ChefHat, Package, UtensilsCrossed,
-  Repeat, Truck, PackageCheck, MapPin, Settings, LogOut, Menu, X
+  Repeat, Truck, PackageCheck, MapPin, Settings, LogOut, Menu, X,
+  Users, CreditCard, Clock, CheckCircle, Route, BookOpen, ShoppingCart,
+  Building, BarChart3, IndianRupee, Shield, FileText
 } from "lucide-react";
 import { cn } from "@/lib/utils";
-import { BRAND } from "@/lib/constants";
+import { BRAND, OPS_NAV_SECTIONS } from "@/lib/constants";
 import { useState } from "react";
 
 const ICON_MAP: Record<string, React.ElementType> = {
   LayoutDashboard, ShoppingBag, ChefHat, Package, UtensilsCrossed,
-  Repeat, Truck, PackageCheck, MapPin, Settings,
+  Repeat, Truck, PackageCheck, MapPin, Settings, Users, CreditCard,
+  Clock, CheckCircle, Route, BookOpen, ShoppingCart, Building,
+  BarChart3, IndianRupee, Shield, FileText,
 };
-
-const NAV = [
-  { label: "Dashboard", href: "/ops", icon: "LayoutDashboard" },
-  { label: "Orders", href: "/ops/orders", icon: "ShoppingBag" },
-  { label: "Production", href: "/ops/production", icon: "ChefHat" },
-  { label: "Inventory", href: "/ops/inventory", icon: "Package" },
-  { label: "Menu", href: "/ops/menu", icon: "UtensilsCrossed" },
-  { label: "Subscriptions", href: "/ops/subscriptions", icon: "Repeat" },
-  { label: "Procurement", href: "/ops/procurement", icon: "Truck" },
-  { label: "Packing", href: "/ops/packing", icon: "PackageCheck" },
-  { label: "Dispatch", href: "/ops/dispatch", icon: "MapPin" },
-  { label: "Settings", href: "/ops/settings", icon: "Settings" },
-];
 
 export function OpsSidebar() {
   const pathname = usePathname();
@@ -48,28 +39,37 @@ export function OpsSidebar() {
         </div>
       </div>
 
-      {/* Nav Items */}
-      <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-1">
-        {NAV.map((item) => {
-          const Icon = ICON_MAP[item.icon];
-          const active = isActive(item.href);
-          return (
-            <Link
-              key={item.href}
-              href={item.href}
-              onClick={() => setMobileOpen(false)}
-              className={cn(
-                "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
-                active
-                  ? "bg-white/15 text-white"
-                  : "text-white/60 hover:bg-white/10 hover:text-white"
-              )}
-            >
-              <Icon size={18} />
-              {item.label}
-            </Link>
-          );
-        })}
+      {/* Nav Sections */}
+      <nav className="flex-1 overflow-y-auto px-3 py-4 space-y-4">
+        {OPS_NAV_SECTIONS.map((section) => (
+          <div key={section.section}>
+            <p className="px-3 mb-1 text-[10px] font-semibold uppercase tracking-wider text-white/30">
+              {section.section}
+            </p>
+            <div className="space-y-0.5">
+              {section.items.map((item) => {
+                const Icon = ICON_MAP[item.icon];
+                const active = isActive(item.href);
+                return (
+                  <Link
+                    key={item.href}
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className={cn(
+                      "flex items-center gap-3 rounded-lg px-3 py-2 text-sm font-medium transition-colors",
+                      active
+                        ? "bg-white/15 text-white"
+                        : "text-white/60 hover:bg-white/10 hover:text-white"
+                    )}
+                  >
+                    {Icon && <Icon size={16} />}
+                    {item.label}
+                  </Link>
+                );
+              })}
+            </div>
+          </div>
+        ))}
       </nav>
 
       {/* Bottom */}

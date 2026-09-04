@@ -81,7 +81,7 @@ export async function GET(request: Request) {
           }, { onConflict: "snapshot_id,menu_item_id" });
       }
 
-      // 5. Explode BOM — get recipe ingredients for each menu item
+      // 5. Explode BOM: get recipe ingredients for each menu item
       const ingredientTotals = new Map<string, { qty: number; unit: string }>();
 
       for (const [menuItemId, prodQty] of menuItemCounts) {
@@ -142,7 +142,7 @@ export async function GET(request: Request) {
             menu_items: menuItemCounts.size,
             ingredients: ingredientTotals.size,
             shortages: [...ingredientTotals].filter(([id, { qty }]) => {
-              // simplified — actual shortage check already done above
+              // simplified, actual shortage check already done above
               return qty > 0;
             }).length,
           },

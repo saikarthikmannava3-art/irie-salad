@@ -17,8 +17,8 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
 
-    // POC: Demo login — in production, use Supabase auth
-    // For now, redirect based on email pattern
+    // Demo login, in production use Supabase auth
+    // Redirect based on email pattern
     setTimeout(() => {
       if (email.includes("ops") || email.includes("admin") || email.includes("kitchen")) {
         window.location.href = "/ops";
@@ -74,11 +74,6 @@ export default function LoginPage() {
           </Button>
         </form>
 
-        <div className="mt-4 text-center text-sm text-muted-foreground">
-          <span className="text-xs bg-amber-50 text-amber-700 px-2 py-1 rounded">
-            POC: Use any email with &quot;ops&quot; for admin, or any email for customer
-          </span>
-        </div>
       </div>
 
       <p className="text-center text-sm text-muted-foreground">

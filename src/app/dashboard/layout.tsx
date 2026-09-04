@@ -1,5 +1,11 @@
+import type { Metadata } from "next";
 import { MarketingHeader } from "@/components/layout/marketing-header";
 import { CustomerSidebar } from "@/components/layout/customer-sidebar";
+
+export const metadata: Metadata = {
+  title: "My Account | IRIE Kitchen",
+  robots: { index: false, follow: false },
+};
 
 export default function DashboardLayout({ children }: { children: React.ReactNode }) {
   return (

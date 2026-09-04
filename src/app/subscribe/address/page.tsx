@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
+import { ProgressBar } from "../page";
 
 export default function AddressPage() {
   const router = useRouter();
@@ -28,21 +29,10 @@ export default function AddressPage() {
 
   return (
     <div>
-      {/* Progress */}
-      <div className="mb-8">
-        <div className="flex items-center justify-between text-xs font-medium text-muted-foreground mb-2">
-          <span className="text-forest">1. Choose Plan</span>
-          <span className="text-forest">2. Pick Salads</span>
-          <span className="text-forest font-bold">3. Address</span>
-          <span>4. Checkout</span>
-        </div>
-        <div className="h-2 rounded-full bg-border overflow-hidden">
-          <div className="h-full w-3/4 bg-forest rounded-full transition-all" />
-        </div>
-      </div>
+      <ProgressBar currentStep={4} />
 
-      <h1 className="text-2xl font-bold text-forest mb-2">Delivery Address</h1>
-      <p className="text-muted-foreground mb-8">Where should we deliver your salads?</p>
+      <h1 className="text-2xl font-bold text-forest mb-2">Delivery Details</h1>
+      <p className="text-muted-foreground mb-8">Where should we deliver your meals?</p>
 
       <form onSubmit={handleContinue} className="space-y-4 max-w-lg">
         <div className="flex gap-2">
@@ -105,8 +95,8 @@ export default function AddressPage() {
         </div>
 
         <div className="flex justify-between pt-4">
-          <Button type="button" variant="ghost" onClick={() => router.push("/subscribe/customize")}>
-            Back
+          <Button type="button" variant="ghost" onClick={() => router.push("/subscribe/plan")}>
+            Back to Plan
           </Button>
           <Button type="submit" size="lg">
             Continue to Checkout

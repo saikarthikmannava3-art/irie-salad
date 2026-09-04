@@ -8,14 +8,14 @@ import { ArrowLeft } from "lucide-react";
 import Link from "next/link";
 
 const TRANSACTIONS = [
-  { id: "1", ingredient: "Chicken Breast", txType: "purchase", quantity: 10.0, unit: "kg", notes: "Vendor: Fresh Farm", createdBy: "Admin", createdAt: "2026-08-11 09:30" },
-  { id: "2", ingredient: "Baby Spinach", txType: "production_use", quantity: -4.2, unit: "kg", notes: "Snapshot: 2026-08-11", createdBy: "System", createdAt: "2026-08-11 06:00" },
-  { id: "3", ingredient: "Romaine Lettuce", txType: "production_use", quantity: -3.8, unit: "kg", notes: "Snapshot: 2026-08-11", createdBy: "System", createdAt: "2026-08-11 06:00" },
-  { id: "4", ingredient: "Feta Cheese", txType: "waste", quantity: -0.3, unit: "kg", notes: "Expired batch", createdBy: "Kitchen Mgr", createdAt: "2026-08-10 17:00" },
-  { id: "5", ingredient: "Cherry Tomatoes", txType: "purchase", quantity: 5.0, unit: "kg", notes: "Vendor: Local Farms", createdBy: "Admin", createdAt: "2026-08-10 08:00" },
-  { id: "6", ingredient: "Quinoa", txType: "adjustment", quantity: -0.5, unit: "kg", notes: "Stock count correction", createdBy: "Kitchen Mgr", createdAt: "2026-08-10 16:30" },
+  { id: "1", ingredient: "Organic Tofu", txType: "purchase", quantity: 5.0, unit: "kg", notes: "Vendor: Fresh Farm", createdBy: "Admin", createdAt: "2026-08-11 09:30" },
+  { id: "2", ingredient: "Mixed Greens", txType: "production_use", quantity: -4.2, unit: "kg", notes: "Snapshot: 2026-08-11", createdBy: "System", createdAt: "2026-08-11 06:00" },
+  { id: "3", ingredient: "Cherry Tomatoes", txType: "production_use", quantity: -2.5, unit: "kg", notes: "Snapshot: 2026-08-11", createdBy: "System", createdAt: "2026-08-11 06:00" },
+  { id: "4", ingredient: "Fresh Herbs", txType: "waste", quantity: -0.2, unit: "kg", notes: "Wilted batch", createdBy: "Kitchen Mgr", createdAt: "2026-08-10 18:00" },
+  { id: "5", ingredient: "Avocado", txType: "purchase", quantity: 3.0, unit: "kg", notes: "Vendor: Local Farms", createdBy: "Admin", createdAt: "2026-08-10 08:00" },
+  { id: "6", ingredient: "Brown Rice", txType: "adjustment", quantity: -0.5, unit: "kg", notes: "Stock count correction", createdBy: "Kitchen Mgr", createdAt: "2026-08-10 16:30" },
   { id: "7", ingredient: "Paneer", txType: "purchase", quantity: 5.0, unit: "kg", notes: "Vendor: Dairy Fresh", createdBy: "Admin", createdAt: "2026-08-10 07:30" },
-  { id: "8", ingredient: "Avocado", txType: "production_use", quantity: -1.2, unit: "kg", notes: "Snapshot: 2026-08-10", createdBy: "System", createdAt: "2026-08-10 06:00" },
+  { id: "8", ingredient: "Coconut Milk", txType: "production_use", quantity: -1.5, unit: "L", notes: "Snapshot: 2026-08-10", createdBy: "System", createdAt: "2026-08-10 06:00" },
 ];
 
 const TX_BADGE: Record<string, { variant: "success" | "danger" | "warning" | "info" | "outline"; label: string }> = {
