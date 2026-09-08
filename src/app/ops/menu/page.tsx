@@ -34,7 +34,7 @@ export default function OpsMenuPage() {
     )},
     { key: "variants", header: "Variants", className: "text-center" },
     { key: "price", header: "From", className: "text-right", render: (row: typeof MENU_ITEMS[0]) => (
-      <span>Rs.{row.price}</span>
+      <span>₹{row.price}</span>
     )},
     { key: "calories", header: "Cal", className: "text-right" },
     { key: "orders", header: "Today's Orders", className: "text-right font-bold" },

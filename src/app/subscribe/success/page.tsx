@@ -10,7 +10,7 @@ export default function SuccessPage() {
       </div>
 
       <h1 className="text-3xl font-bold text-forest mb-2">
-        Welcome to IRIE Kitchen!
+        Welcome to irie kitchen!
       </h1>
       <p className="text-lg text-muted-foreground mb-8">
         Your subscription is active. Get ready for fresh Indian meals!

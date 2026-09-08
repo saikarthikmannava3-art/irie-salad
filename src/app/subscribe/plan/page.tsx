@@ -151,10 +151,10 @@ export default function PlanPage() {
               <div className="space-y-2">
                 <div>
                   <span className="text-2xl font-bold text-forest">
-                    Rs.{totalPrice.toLocaleString()}
+                    ₹{totalPrice.toLocaleString()}
                   </span>
                   <p className="text-sm text-muted-foreground mt-0.5">
-                    Rs.{dailyPrice}/day
+                    ₹{dailyPrice}/day
                   </p>
                 </div>
 
@@ -164,7 +164,7 @@ export default function PlanPage() {
                     className="flex items-center gap-1 w-fit"
                   >
                     <TrendingDown size={12} />
-                    Save Rs.{savings}/day ({savingsPercent}%)
+                    Save ₹{savings}/day ({savingsPercent}%)
                   </Badge>
                 )}
               </div>
@@ -201,7 +201,7 @@ export default function PlanPage() {
                         </span>
                       </div>
                       <span className="text-sm font-semibold text-forest">
-                        Rs.{price}
+                        ₹{price}
                       </span>
                     </div>
                   );
@@ -232,7 +232,7 @@ export default function PlanPage() {
                         </span>
                       </div>
                       <span className="text-sm font-semibold text-forest">
-                        Rs.{price}
+                        ₹{price}
                       </span>
                     </div>
                   );

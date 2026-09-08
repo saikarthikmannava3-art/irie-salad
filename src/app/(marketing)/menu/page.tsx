@@ -139,14 +139,14 @@ function MenuPageContent() {
                 <div className="h-48 relative bg-muted overflow-hidden">
                   <Image
                     src={mc.image}
-                    alt={`${mc.name} | IRIE Kitchen`}
+                    alt={`${mc.name} | irie kitchen`}
                     fill
                     className="object-cover group-hover:scale-105 transition-transform duration-300"
                     sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                   />
                   <div className="absolute top-3 right-3 z-10">
                     <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-forest shadow-sm">
-                      From Rs.{lowestPrice > 0 ? lowestPrice : startingPrice}
+                      From ₹{lowestPrice > 0 ? lowestPrice : startingPrice}
                     </span>
                   </div>
                   <div className="absolute top-3 left-3 z-10">
@@ -197,14 +197,14 @@ function MenuPageContent() {
                   <div className="h-36 relative bg-muted overflow-hidden">
                     <Image
                       src={mc.image}
-                      alt={`${mc.name} | IRIE Kitchen`}
+                      alt={`${mc.name} | irie kitchen`}
                       fill
                       className="object-cover group-hover:scale-105 transition-transform duration-300"
                       sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
                     />
                     <div className="absolute top-3 right-3 z-10">
                       <span className="rounded-full bg-white/90 px-2.5 py-1 text-xs font-bold text-forest shadow-sm">
-                        Rs.{price}
+                        ₹{price}
                       </span>
                     </div>
                     <div className="absolute top-3 left-3 z-10">

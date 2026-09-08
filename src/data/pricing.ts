@@ -1,6 +1,6 @@
 import type { MealCategoryPricingEntry, PlanDuration, PricingEntry } from "@/types/domain";
 
-// === NEW: Meal Category Pricing (IRIE Kitchen) ===
+// === NEW: Meal Category Pricing (irie kitchen) ===
 
 export const MEAL_CATEGORY_PRICING: MealCategoryPricingEntry[] = [
   { mealCategorySlug: "irie-breakfast", prices: { single: 149, "12": 134, "24": 119, "48": 112 } },
@@ -42,15 +42,15 @@ export function getMealCategoryStartingPrice(slug: string): number {
 // These exports are kept for existing pages that still use product slugs.
 
 export const PRICING: PricingEntry[] = [
-  // Signature IRIE Salad - Tofu/Paneer 350g
+  // signature irie salad - Tofu/Paneer 350g
   { productSlug: "signature-irie-salad", variantId: "salad-tofu-350", prices: { single: 249, "12": 224, "24": 199, "48": 187 } },
   { productSlug: "signature-irie-salad", variantId: "salad-paneer-350", prices: { single: 249, "12": 224, "24": 199, "48": 187 } },
-  // Signature IRIE Salad - Garden 350g
+  // signature irie salad - Garden 350g
   { productSlug: "signature-irie-salad", variantId: "salad-garden-350", prices: { single: 229, "12": 206, "24": 183, "48": 172 } },
-  // Signature IRIE Salad - Tofu/Paneer 500g
+  // signature irie salad - Tofu/Paneer 500g
   { productSlug: "signature-irie-salad", variantId: "salad-tofu-500", prices: { single: 299, "12": 269, "24": 239, "48": 224 } },
   { productSlug: "signature-irie-salad", variantId: "salad-paneer-500", prices: { single: 299, "12": 269, "24": 239, "48": 224 } },
-  // Signature IRIE Salad - Garden 500g
+  // signature irie salad - Garden 500g
   { productSlug: "signature-irie-salad", variantId: "salad-garden-500", prices: { single: 279, "12": 251, "24": 223, "48": 209 } },
 
   // Signature Coconut Overnight Oats (all options same price)
@@ -64,10 +64,10 @@ export const PRICING: PricingEntry[] = [
   // Fresh Seasonal Fruit Bowl
   { productSlug: "fresh-seasonal-fruit-bowl", variantId: "fruit-default", prices: { single: 249, "12": 224, "24": 199, "48": 187 } },
 
-  // IRIE Millet Wellness Bowl
+  // irie millet wellness bowl
   { productSlug: "irie-millet-wellness-bowl", variantId: "millet-default", prices: { single: 279, "12": 251, "24": 223, "48": 209 } },
 
-  // IRIE Power Meal
+  // irie power meal
   { productSlug: "irie-power-meal", variantId: "power-default", prices: { single: 310, "12": 279, "24": 248, "48": 233 } },
 
   // Fresh Detox Juice (single only, no subscription pricing yet)

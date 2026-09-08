@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { MarketingHeader } from "@/components/layout/marketing-header";
 
 export const metadata: Metadata = {
-  title: "Subscribe | IRIE Kitchen",
+  title: "Subscribe | irie kitchen",
   robots: { index: false, follow: false },
 };
 

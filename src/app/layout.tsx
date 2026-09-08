@@ -19,11 +19,11 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE_URL),
   title: {
-    default: "IRIE Kitchen | Indian Food. Made Better.",
-    template: "%s | IRIE Kitchen",
+    default: "irie kitchen | Indian Food. Made Better.",
+    template: "%s | irie kitchen",
   },
   description:
-    "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at Rs.97/meal.",
+    "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at ₹97/meal.",
   keywords: [
     "Indian food delivery",
     "Indian meal subscription",
@@ -36,14 +36,14 @@ export const metadata: Metadata = {
     "fresh Indian meals",
     "pure vegetarian meals",
   ],
-  authors: [{ name: "IRIE Kitchen" }],
-  creator: "IRIE Kitchen",
+  authors: [{ name: "irie kitchen" }],
+  creator: "irie kitchen",
   openGraph: {
     type: "website",
     locale: "en_IN",
     url: SITE_URL,
-    siteName: "IRIE Kitchen",
-    title: "IRIE Kitchen | Indian Food. Made Better.",
+    siteName: "irie kitchen",
+    title: "irie kitchen | Indian Food. Made Better.",
     description:
       "Fresh Indian meals prepared daily with ancient food wisdom and modern nutrition. Breakfast, lunch, snacks and dinner delivered to your door in Hyderabad.",
     images: [
@@ -51,14 +51,14 @@ export const metadata: Metadata = {
         url: `/images/og-default.jpg`,
         width: 1200,
         height: 630,
-        alt: "IRIE Kitchen | Indian Food. Made Better.",
+        alt: "irie kitchen | Indian Food. Made Better.",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "IRIE Kitchen | Indian Food. Made Better.",
-    description: "Fresh Indian meals prepared daily in Hyderabad. Starting at Rs.97/meal.",
+    title: "irie kitchen | Indian Food. Made Better.",
+    description: "Fresh Indian meals prepared daily in Hyderabad. Starting at ₹97/meal.",
   },
   alternates: {
     canonical: SITE_URL,

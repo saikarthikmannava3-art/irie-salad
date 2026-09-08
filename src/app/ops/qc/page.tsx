@@ -17,7 +17,7 @@ const INITIAL_PACKAGES = [
   { id: "PKG-002", orderId: "ORD-143", customer: "Priya Sharma", meal: "Tropical Smoothie Bowl", occasion: "Breakfast", window: "morning" as DeliveryWindow, status: "pending" },
   { id: "PKG-003", orderId: "ORD-144", customer: "Rohan Gupta", meal: "Roti Sabzi Thali", occasion: "Lunch", window: "morning" as DeliveryWindow, status: "pending" },
   { id: "PKG-004", orderId: "ORD-145", customer: "Ananya Singh", meal: "Hyderabadi Veg Dum Biryani", occasion: "Lunch", window: "morning" as DeliveryWindow, status: "pending" },
-  { id: "PKG-005", orderId: "ORD-146", customer: "Kabir Mehta", meal: "Signature IRIE Salad (350g)", occasion: "Lunch", window: "morning" as DeliveryWindow, status: "pending" },
+  { id: "PKG-005", orderId: "ORD-146", customer: "Kabir Mehta", meal: "signature irie salad (350g)", occasion: "Lunch", window: "morning" as DeliveryWindow, status: "pending" },
   { id: "PKG-006", orderId: "ORD-147", customer: "Ishaan Kumar", meal: "Coconut Overnight Oats", occasion: "Breakfast", window: "morning" as DeliveryWindow, status: "pending" },
   { id: "PKG-007", orderId: "ORD-148", customer: "Zara Khan", meal: "Aloo Paratha with Curd & Pickle + Detox Juice", occasion: "Breakfast", window: "morning" as DeliveryWindow, status: "pending" },
   { id: "PKG-008", orderId: "ORD-149", customer: "Dev Sharma", meal: "Mixed Sprout Chaat", occasion: "Evening Snack", window: "evening" as DeliveryWindow, status: "pending" },

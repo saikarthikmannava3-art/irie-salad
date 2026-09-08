@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 
 const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://iriekitchen.in";
-const SITE_NAME = "IRIE Kitchen";
+const SITE_NAME = "irie kitchen";
 const DEFAULT_DESCRIPTION =
-  "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at Rs.97/meal.";
+  "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at ₹97/meal.";
 
 export function buildMetadata(options: {
   title: string;

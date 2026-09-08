@@ -8,11 +8,11 @@ export const PRODUCTS: Product[] = [
   {
     id: "prod-1",
     slug: "signature-irie-salad",
-    name: "Signature IRIE Salad",
-    shortName: "IRIE Salad",
+    name: "signature irie salad",
+    shortName: "irie salad",
     description: "Our signature fresh salad with your choice of protein: Tofu, Paneer, or Garden style. Made daily with locally sourced ingredients.",
     category: "Salads",
-    image: "/images/salads/mediterranean-power-bowl.jpg",
+    image: "/images/products/signature-irie-salad.jpg",
     nutrition: { calories: 380, proteinG: 24, fiberG: 8 },
     tags: ["Signature", "Customizable"],
     variants: [
@@ -83,7 +83,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "prod-5",
     slug: "irie-millet-wellness-bowl",
-    name: "IRIE Millet Wellness Bowl",
+    name: "irie millet wellness bowl",
     shortName: "Millet Bowl",
     description: "Nutritious millet-based bowl with seasonal vegetables and house dressing. Recipe rotates daily for variety.",
     category: "Bowls",
@@ -100,7 +100,7 @@ export const PRODUCTS: Product[] = [
   {
     id: "prod-6",
     slug: "irie-power-meal",
-    name: "IRIE Power Meal",
+    name: "irie power meal",
     shortName: "Power Meal",
     description: "A complete high-protein meal with balanced macros. Daily composition designed by our nutritionist.",
     category: "Meals",

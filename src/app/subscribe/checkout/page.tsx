@@ -121,7 +121,7 @@ export default function CheckoutPage() {
               </p>
             </div>
             <span className="text-sm font-semibold text-forest whitespace-nowrap">
-              Rs.{basePrice}
+              ₹{basePrice}
             </span>
           </div>
           {sel.addOns.length > 0 && (
@@ -134,7 +134,7 @@ export default function CheckoutPage() {
                     <span>
                       {addOn?.isMarketPrice
                         ? "Market Price"
-                        : `Rs.${(addOn?.price ?? 0) * ao.quantity}`}
+                        : `₹${(addOn?.price ?? 0) * ao.quantity}`}
                     </span>
                   </div>
                 );
@@ -194,7 +194,7 @@ export default function CheckoutPage() {
             <div className="pt-3 border-t border-border space-y-2 text-sm">
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Daily Price</span>
-                <span className="font-medium">Rs.{dailyPrice}</span>
+                <span className="font-medium">₹{dailyPrice}</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Plan</span>
@@ -211,7 +211,7 @@ export default function CheckoutPage() {
               <div className="border-t border-border pt-2 mt-2 flex justify-between font-bold text-base">
                 <span>Total Amount</span>
                 <span className="text-forest">
-                  Rs.{totalPrice.toLocaleString()}
+                  ₹{totalPrice.toLocaleString()}
                 </span>
               </div>
             </div>
@@ -273,7 +273,7 @@ export default function CheckoutPage() {
               className="w-full"
             >
               <CreditCard size={18} />
-              Confirm & Pay Rs.{totalPrice.toLocaleString()}
+              Confirm & Pay ₹{totalPrice.toLocaleString()}
             </Button>
 
             <p className="text-center text-xs text-muted-foreground mt-3">

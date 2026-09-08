@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Leaf, Heart, Users, Award, Flame, Droplets } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "About Us | IRIE Kitchen | Ancient Food Wisdom, Modern Kitchen",
+  title: "About Us | irie kitchen | Ancient Food Wisdom, Modern Kitchen",
   description:
-    "IRIE Kitchen is a pure-vegetarian Indian food company. We bring ancient food wisdom and traditional cooking techniques to everyday meals. Better Indian food, delivered daily.",
+    "irie kitchen is a pure-vegetarian Indian food company. We bring ancient food wisdom and traditional cooking techniques to everyday meals. Better Indian food, delivered daily.",
   alternates: { canonical: "https://iriekitchen.in/about" },
 };
 
@@ -38,7 +38,7 @@ export default function AboutPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       {/* Hero */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-forest">About IRIE Kitchen</h1>
+        <h1 className="text-4xl font-bold text-forest">About irie kitchen</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
           We&apos;re an Indian food company on a mission to make everyday meals better.
           Ancient food wisdom. Modern kitchen.
@@ -51,7 +51,7 @@ export default function AboutPage() {
           <h2 className="text-2xl font-bold text-forest mb-4">Our Story</h2>
           <div className="space-y-4 text-foreground/80 leading-relaxed">
             <p>
-              IRIE Kitchen was born from a simple belief: Indian food is already one of the
+              irie kitchen was born from a simple belief: Indian food is already one of the
               world&apos;s greatest cuisines. It just needs a modern kitchen to bring out its best.
             </p>
             <p>
@@ -105,12 +105,12 @@ export default function AboutPage() {
         </div>
       </div>
 
-      {/* The IRIE Standard */}
+      {/* The irie standard */}
       <div className="mb-16 max-w-3xl mx-auto">
         <div className="rounded-2xl bg-forest/5 border border-forest/20 p-8 md:p-12">
           <div className="flex items-center gap-3 mb-6">
             <Droplets size={24} className="text-forest" />
-            <h2 className="text-2xl font-bold text-forest">The IRIE Standard</h2>
+            <h2 className="text-2xl font-bold text-forest">The irie standard</h2>
           </div>
           <p className="text-foreground/80 mb-6">
             Every meal that leaves our kitchen meets these non-negotiable standards.

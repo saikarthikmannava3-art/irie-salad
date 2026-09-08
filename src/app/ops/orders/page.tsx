@@ -14,7 +14,7 @@ const MEAL_NAMES = [
   "Roti Sabzi Thali",
   "Hyderabadi Veg Dum Biryani",
   "Tropical Smoothie Bowl",
-  "Signature IRIE Salad (350g)",
+  "signature irie salad (350g)",
   "Coconut Overnight Oats",
   "Indori Poha with Sev",
   "Mixed Sprout Chaat",

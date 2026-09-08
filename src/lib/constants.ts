@@ -90,7 +90,7 @@ export const PLAN_DURATIONS = [
 ] as const;
 
 export const BRAND = {
-  name: "IRIE Kitchen",
+  name: "irie kitchen",
   tagline: "Indian Food. Made Better.",
   description: "Pure vegetarian Indian food delivery focused on daily-rotating recipes, wholesome ingredients, and nutrition-led meal design",
 } as const;

@@ -22,7 +22,7 @@ export function OrganizationJsonLd() {
       data={{
         "@context": "https://schema.org",
         "@type": "Organization",
-        name: "IRIE Kitchen",
+        name: "irie kitchen",
         url: SITE_URL,
         logo: `${SITE_URL}/images/logo.png`,
         description:
@@ -56,10 +56,10 @@ export function LocalBusinessJsonLd(location: {
         "@context": "https://schema.org",
         "@type": "FoodEstablishment",
         "@id": `${SITE_URL}/#${location.city.toLowerCase()}`,
-        name: `IRIE Kitchen ${location.city}`,
+        name: `irie kitchen ${location.city}`,
         url: `${SITE_URL}/locations/${location.city.toLowerCase()}`,
         image: `${SITE_URL}/images/logo.png`,
-        description: `Fresh Indian meals delivered daily in ${location.city}. Breakfast, lunch, snacks & dinner prepared with ancient food wisdom. Starting at Rs.97/meal.`,
+        description: `Fresh Indian meals delivered daily in ${location.city}. Breakfast, lunch, snacks & dinner prepared with ancient food wisdom. Starting at ₹97/meal.`,
         address: {
           "@type": "PostalAddress",
           addressLocality: location.city,
@@ -77,7 +77,7 @@ export function LocalBusinessJsonLd(location: {
             },
           }),
         servesCuisine: ["Indian", "Vegetarian", "Healthy"],
-        priceRange: "Rs.97 - Rs.310",
+        priceRange: "₹97 - ₹310",
         openingHoursSpecification: {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
@@ -100,7 +100,7 @@ export function ProductJsonLd({ product }: { product: Product }) {
         description: product.description,
         image: `${SITE_URL}${product.image}`,
         url: `${SITE_URL}/menu/${product.slug}`,
-        brand: { "@type": "Brand", name: "IRIE Kitchen" },
+        brand: { "@type": "Brand", name: "irie kitchen" },
         offers: {
           "@type": "Offer",
           priceCurrency: "INR",

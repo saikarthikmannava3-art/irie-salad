@@ -70,7 +70,7 @@ const INITIAL_PACKAGES: PackageItem[] = [
   },
   {
     id: "IR1236-P01", orderId: "IR1236", customer: "Priya", packageNum: "1/2",
-    meal: "Signature IRIE Salad (350g)", occasion: "Lunch", window: "morning",
+    meal: "signature irie salad (350g)", occasion: "Lunch", window: "morning",
     addOns: ["Protein Tikki x 1"], route: "R-12", status: "pending",
     checklist: { mealPacked: false, addOnIncluded: false, labelAttached: false, packageVerified: false },
   },
@@ -106,7 +106,7 @@ const INITIAL_PACKAGES: PackageItem[] = [
   },
   {
     id: "IR1240-P02", orderId: "IR1240", customer: "Anita", packageNum: "2/2",
-    meal: "Signature IRIE Salad (350g)", occasion: "Lunch", window: "morning",
+    meal: "signature irie salad (350g)", occasion: "Lunch", window: "morning",
     addOns: [], route: "R-11", status: "pending",
     checklist: { mealPacked: false, addOnIncluded: true, labelAttached: false, packageVerified: false },
   },

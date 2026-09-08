@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Calendar, ChefHat, Snowflake, Truck, Clock, Thermometer, UtensilsCrossed } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "How It Works | IRIE Kitchen Chilled Meal Delivery",
+  title: "How It Works | irie kitchen Chilled Meal Delivery",
   description:
-    "Learn how IRIE Kitchen works: choose your meals, we cook fresh using traditional Indian techniques, rapid chill for safety, and deliver to your door. Two daily deliveries in Hyderabad.",
+    "Learn how irie kitchen works: choose your meals, we cook fresh using traditional Indian techniques, rapid chill for safety, and deliver to your door. Two daily deliveries in Hyderabad.",
   alternates: { canonical: "https://iriekitchen.in/how-it-works" },
 };
 
@@ -43,7 +43,7 @@ export default function HowItWorksPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       {/* Hero */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-forest sm:text-5xl">How IRIE Kitchen Works</h1>
+        <h1 className="text-4xl font-bold text-forest sm:text-5xl">How irie kitchen Works</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
           From our kitchen to your table. A step-by-step look at how we deliver
           better Indian food every day.

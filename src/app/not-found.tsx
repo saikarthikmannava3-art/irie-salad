@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Page Not Found | IRIE Kitchen",
+  title: "Page Not Found | irie kitchen",
   robots: { index: false, follow: false },
 };
 

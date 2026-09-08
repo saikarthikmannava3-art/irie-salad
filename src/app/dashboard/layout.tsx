@@ -3,7 +3,7 @@ import { MarketingHeader } from "@/components/layout/marketing-header";
 import { CustomerSidebar } from "@/components/layout/customer-sidebar";
 
 export const metadata: Metadata = {
-  title: "My Account | IRIE Kitchen",
+  title: "My Account | irie kitchen",
   robots: { index: false, follow: false },
 };
 

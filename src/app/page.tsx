@@ -7,9 +7,9 @@ import { OrganizationJsonLd } from "@/components/structured-data";
 import { Truck, Calendar, Heart, ChefHat, Zap, Snowflake, UtensilsCrossed } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "IRIE Kitchen | Indian Food. Made Better.",
+  title: "irie kitchen | Indian Food. Made Better.",
   description:
-    "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at Rs.97/meal.",
+    "Fresh Indian meals, breakfast, lunch, snacks and dinner, prepared with ancient wisdom and modern nutrition. Delivered daily in Hyderabad. Starting at ₹97/meal.",
   alternates: { canonical: "https://iriekitchen.in" },
 };
 
@@ -48,10 +48,10 @@ const PLANS_PREVIEW = [
 ];
 
 const MEAL_OCCASIONS = [
-  { name: "Breakfast", from: "Rs.112", image: "/images/products/coconut-overnight-oats.jpg" },
-  { name: "Lunch", from: "Rs.187", image: "/images/salads/mediterranean-power-bowl.jpg" },
-  { name: "Evening Snack", from: "Rs.97", image: "/images/products/tropical-smoothie-bowl.jpg" },
-  { name: "Dinner", from: "Rs.165", image: "/images/products/irie-millet-wellness-bowl.jpg" },
+  { name: "Breakfast", from: "₹112", image: "/images/products/coconut-overnight-oats.jpg" },
+  { name: "Lunch", from: "₹187", image: "/images/meal-categories/irie-lunch-thali.jpg" },
+  { name: "Evening Snack", from: "₹97", image: "/images/products/tropical-smoothie-bowl.jpg" },
+  { name: "Dinner", from: "₹165", image: "/images/products/irie-millet-wellness-bowl.jpg" },
 ];
 
 export default function HomePage() {
@@ -89,7 +89,7 @@ export default function HomePage() {
                 </Link>
               </div>
               <p className="mt-4 text-sm text-muted-foreground">
-                Starting at Rs.97/meal. Pause anytime.
+                Starting at ₹97/meal. Pause anytime.
               </p>
             </div>
           </div>
@@ -132,7 +132,7 @@ export default function HomePage() {
                     <div className="h-40 relative bg-muted overflow-hidden">
                       <img
                         src={occasion.image}
-                        alt={`${occasion.name} meals by IRIE Kitchen`}
+                        alt={`${occasion.name} meals by irie kitchen`}
                         className="absolute inset-0 w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                       />
                     </div>
@@ -177,11 +177,11 @@ export default function HomePage() {
                   <h3 className="text-lg font-bold text-foreground">{plan.name}</h3>
                   <div className="mt-4">
                     <span className="text-4xl font-bold text-forest">
-                      Rs.{plan.price.toLocaleString()}
+                      ₹{plan.price.toLocaleString()}
                     </span>
                   </div>
                   <p className="mt-1 text-sm text-muted-foreground">
-                    Rs.{plan.perMeal}/meal
+                    ₹{plan.perMeal}/meal
                   </p>
                   <ul className="mt-6 space-y-2 text-left">
                     {plan.features.map((f) => (
@@ -213,7 +213,7 @@ export default function HomePage() {
             <Zap size={32} className="mx-auto text-mustard mb-4" />
             <h2 className="text-3xl font-bold text-white">Ready for better Indian food?</h2>
             <p className="mt-3 text-white/70">
-              Join hundreds who trust IRIE Kitchen for their daily nutrition.
+              Join hundreds who trust irie kitchen for their daily nutrition.
             </p>
             <div className="mt-8">
               <Link href="/subscribe">

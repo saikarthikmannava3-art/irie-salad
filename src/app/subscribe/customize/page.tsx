@@ -129,7 +129,7 @@ export default function CustomizePage() {
                             <p className="text-xs text-muted-foreground">
                               {addOn.isMarketPrice
                                 ? "Market Price"
-                                : `Rs.${addOn.price}`}
+                                : `₹${addOn.price}`}
                             </p>
                           </div>
                           <div className="flex items-center gap-2">

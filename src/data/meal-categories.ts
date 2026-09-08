@@ -5,7 +5,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-01",
     slug: "irie-breakfast",
-    name: "IRIE Breakfast",
+    name: "irie breakfast",
     shortName: "Breakfast",
     description: "A different wholesome Indian breakfast every day. Idli, dosa, paratha, pongal and more. Chef-curated daily menu.",
     mealOccasion: "breakfast",
@@ -19,7 +19,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-02",
     slug: "irie-lunch-thali",
-    name: "IRIE Lunch Thali",
+    name: "irie lunch thali",
     shortName: "Lunch Thali",
     description: "A complete Indian thali with dal, sabzi, rice, roti and accompaniments. Daily recipe rotates across regions.",
     mealOccasion: "lunch",
@@ -31,7 +31,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-03",
     slug: "irie-biryani",
-    name: "IRIE Biryani",
+    name: "irie biryani",
     shortName: "Biryani",
     description: "Aromatic vegetable biryani or pulao, slow-cooked daily. Served with raita and accompaniments.",
     mealOccasion: "lunch",
@@ -43,7 +43,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-04",
     slug: "signature-irie-salad-350",
-    name: "Signature IRIE Salad (350g)",
+    name: "signature irie salad (350g)",
     shortName: "Salad 350g",
     description: "Our signature fresh salad with your choice of Tofu, Paneer, or Garden style. 350g portion.",
     mealOccasion: "lunch",
@@ -55,7 +55,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-05",
     slug: "signature-irie-salad-500",
-    name: "Signature IRIE Salad (500g)",
+    name: "signature irie salad (500g)",
     shortName: "Salad 500g",
     description: "Our signature fresh salad with your choice of Tofu, Paneer, or Garden style. Generous 500g portion.",
     mealOccasion: "lunch",
@@ -69,7 +69,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-06",
     slug: "irie-evening-snack",
-    name: "IRIE Evening Snack",
+    name: "irie evening snack",
     shortName: "Eve Snack",
     description: "A healthy Indian snack for your evening. Chaat, dhokla, sundal and more. Changes daily.",
     mealOccasion: "evening-snack",
@@ -95,7 +95,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-08",
     slug: "irie-dinner",
-    name: "IRIE Dinner",
+    name: "irie dinner",
     shortName: "Dinner",
     description: "A light, balanced Indian dinner. Khichdi, roti-dal, dosa, soup and more. Daily recipe rotates.",
     mealOccasion: "dinner",
@@ -107,7 +107,7 @@ export const MEAL_CATEGORIES: MealCategory[] = [
   {
     id: "mc-09",
     slug: "irie-millet-dinner",
-    name: "IRIE Millet Dinner",
+    name: "irie millet dinner",
     shortName: "Millet Dinner",
     description: "Nutritious millet-based dinner. Bajra roti, ragi roti, jowar preparations. High fiber, gluten-free options.",
     mealOccasion: "dinner",

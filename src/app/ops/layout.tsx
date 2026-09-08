@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { OpsSidebar } from "@/components/layout/ops-sidebar";
 
 export const metadata: Metadata = {
-  title: "Operations | IRIE Kitchen",
+  title: "Operations | irie kitchen",
   robots: { index: false, follow: false },
 };
 

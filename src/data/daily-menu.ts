@@ -1,6 +1,6 @@
 import type { DailyMenuEntry, DailyMenuItem } from "@/types/domain";
 
-// === NEW: IRIE Kitchen Daily Menu (meal category → recipe mapping) ===
+// === NEW: irie kitchen Daily Menu (meal category → recipe mapping) ===
 
 export const DAILY_MENU_ENTRIES: DailyMenuEntry[] = [
   // ========== Aug 16 (Sat) ==========

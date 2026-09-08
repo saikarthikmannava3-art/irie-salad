@@ -27,7 +27,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
 
   const price = getStartingPrice(product.slug);
   return buildMetadata({
-    title: `${product.name} | From Rs.${price} | IRIE Kitchen`,
+    title: `${product.name} | From ₹${price} | irie kitchen`,
     description: `${product.description} ${product.nutrition.calories} cal, ${product.nutrition.proteinG}g protein. Fresh daily delivery in Hyderabad.`,
     path: `/menu/${product.slug}`,
     ogImage: `${SITE_URL}${product.image}`,
@@ -68,7 +68,7 @@ export default async function ProductPage({ params }: PageProps) {
           <div className="relative aspect-square rounded-2xl overflow-hidden bg-muted">
             <Image
               src={product.image}
-              alt={`${product.name} | fresh Indian meal by IRIE Kitchen`}
+              alt={`${product.name} | fresh Indian meal by irie kitchen`}
               fill
               className="object-cover"
               sizes="(max-width: 1024px) 100vw, 50vw"
@@ -90,8 +90,8 @@ export default async function ProductPage({ params }: PageProps) {
             {/* Price */}
             <div className="mt-6 p-4 rounded-xl bg-cream">
               <p className="text-sm text-muted-foreground">Starting from</p>
-              <p className="text-3xl font-bold text-forest">Rs.{startingPrice}<span className="text-base font-normal text-muted-foreground">/meal</span></p>
-              <p className="text-sm text-muted-foreground mt-1">Subscription plans from Rs.187/meal</p>
+              <p className="text-3xl font-bold text-forest">₹{startingPrice}<span className="text-base font-normal text-muted-foreground">/meal</span></p>
+              <p className="text-sm text-muted-foreground mt-1">Subscription plans from ₹187/meal</p>
             </div>
 
             {/* Nutrition */}
@@ -126,7 +126,7 @@ export default async function ProductPage({ params }: PageProps) {
                     return (
                       <div key={v.id} className="flex items-center justify-between p-3 rounded-lg border border-border">
                         <span className="font-medium">{v.label}</span>
-                        {variantPrice ? <span className="text-forest font-semibold">Rs.{variantPrice}</span> : null}
+                        {variantPrice ? <span className="text-forest font-semibold">₹{variantPrice}</span> : null}
                       </div>
                     );
                   })}
@@ -143,7 +143,7 @@ export default async function ProductPage({ params }: PageProps) {
                     <div key={addon.id} className="flex items-center justify-between p-3 rounded-lg bg-cream/50">
                       <span className="font-medium">{addon.name}</span>
                       <span className="text-sm text-muted-foreground">
-                        {addon.isMarketPrice ? "Market Price" : `Rs.${addon.price}`}
+                        {addon.isMarketPrice ? "Market Price" : `₹${addon.price}`}
                       </span>
                     </div>
                   ))}

@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 import { Flame, Leaf, Shield, Droplets, Award, Check } from "lucide-react";
 
 export const metadata: Metadata = {
-  title: "Our Food Standard | IRIE Kitchen Cooking Philosophy & Principles",
+  title: "Our Food Standard | irie kitchen Cooking Philosophy & Principles",
   description:
-    "Learn about the IRIE Food Standard: ancient food wisdom, traditional cooking techniques, minimal oil, no deep frying, FSSAI compliant. Better Indian food, every day.",
+    "Learn about the irie food standard: ancient food wisdom, traditional cooking techniques, minimal oil, no deep frying, FSSAI compliant. Better Indian food, every day.",
   alternates: { canonical: "https://iriekitchen.in/food-standard" },
 };
 
@@ -53,7 +53,7 @@ export default function FoodStandardPage() {
     <div className="mx-auto max-w-7xl px-4 py-12 sm:px-6 lg:px-8">
       {/* Hero */}
       <div className="text-center mb-16">
-        <h1 className="text-4xl font-bold text-forest sm:text-5xl">The IRIE Food Standard</h1>
+        <h1 className="text-4xl font-bold text-forest sm:text-5xl">The irie food standard</h1>
         <p className="mt-4 text-lg text-muted-foreground max-w-2xl mx-auto">
           Ancient food wisdom. Modern kitchen. Every meal we make follows these
           non-negotiable principles.
@@ -72,7 +72,7 @@ export default function FoodStandardPage() {
               digestibility, and flavor.
             </p>
             <p>
-              At IRIE Kitchen, we don&apos;t reinvent Indian food. We respect it. We apply
+              At irie kitchen, we don&apos;t reinvent Indian food. We respect it. We apply
               these time-tested techniques with modern consistency, hygiene standards,
               and portion control to deliver better everyday meals.
             </p>
@@ -160,7 +160,7 @@ export default function FoodStandardPage() {
 
       {/* CTA */}
       <div className="text-center rounded-2xl bg-forest py-12 px-6">
-        <h2 className="text-2xl font-bold text-white mb-3">Taste the IRIE standard</h2>
+        <h2 className="text-2xl font-bold text-white mb-3">Taste the irie standard</h2>
         <p className="text-white/70 mb-6">Better Indian food, every day. See what&apos;s on the menu.</p>
         <Link href="/menu">
           <Button size="lg" className="bg-mustard text-white hover:bg-mustard-light text-base px-8">

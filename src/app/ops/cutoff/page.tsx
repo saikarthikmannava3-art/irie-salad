@@ -16,7 +16,7 @@ const MORNING_ORDERS = [
   { id: "3", customer: "Rohan Gupta", meal: "Hyderabadi Veg Dum Biryani", occasion: "Lunch", status: "locked" },
   { id: "4", customer: "Ananya Singh", meal: "Tropical Smoothie Bowl", occasion: "Breakfast", status: "locked" },
   { id: "5", customer: "Kabir Mehta", meal: "Coconut Overnight Oats", occasion: "Breakfast", status: "locked" },
-  { id: "6", customer: "Ishaan Kumar", meal: "Signature IRIE Salad", occasion: "Lunch", status: "locked" },
+  { id: "6", customer: "Ishaan Kumar", meal: "signature irie salad", occasion: "Lunch", status: "locked" },
 ];
 
 const EVENING_ORDERS = [

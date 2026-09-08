@@ -926,8 +926,8 @@ export const RECIPES: Recipe[] = [
   {
     id: "recipe-w01",
     slug: "signature-irie-salad",
-    name: "Signature IRIE Salad",
-    shortName: "IRIE Salad",
+    name: "signature irie salad",
+    shortName: "irie salad",
     description: "Our signature fresh salad with your choice of protein: Tofu, Paneer, or Garden style. Made daily with locally sourced ingredients.",
     mealOccasion: "lunch",
     category: "Fresh",

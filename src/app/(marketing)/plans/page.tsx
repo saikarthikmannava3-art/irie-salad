@@ -8,7 +8,7 @@ import { Check, Star } from "lucide-react";
 export const metadata: Metadata = {
   title: "Plans & Pricing | Indian Meal Subscription Plans",
   description:
-    "Choose your IRIE Kitchen plan: 3-day trial, 12-day, 24-day, or 48-day plans. Save up to 25%. Pause anytime, free delivery, customize daily meals.",
+    "Choose your irie kitchen plan: 3-day trial, 12-day, 24-day, or 48-day plans. Save up to 25%. Pause anytime, free delivery, customize daily meals.",
   alternates: { canonical: "https://iriekitchen.in/plans" },
 };
 
@@ -142,9 +142,9 @@ export default function PlansPage() {
 
             <div className="mt-6">
               <div className="flex items-baseline gap-1">
-                <span className="text-3xl font-bold text-forest">Rs.{plan.price.toLocaleString()}</span>
+                <span className="text-3xl font-bold text-forest">₹{plan.price.toLocaleString()}</span>
               </div>
-              <p className="text-sm text-muted-foreground">Rs.{plan.perMeal}/meal</p>
+              <p className="text-sm text-muted-foreground">₹{plan.perMeal}/meal</p>
               {plan.discount > 0 && (
                 <p className="mt-1 text-xs font-medium text-success">Save {plan.discount}%</p>
               )}

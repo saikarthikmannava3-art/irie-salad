@@ -248,7 +248,7 @@ export default function BuildMyIrieDayPage() {
                         </p>
                         <div className="flex items-center justify-between">
                           <span className="text-sm font-semibold text-forest">
-                            From Rs.{price}
+                            From ₹{price}
                           </span>
                           <Button
                             size="sm"
@@ -336,7 +336,7 @@ export default function BuildMyIrieDayPage() {
                     </p>
                     <div className="flex items-center justify-between">
                       <span className="text-sm font-semibold text-forest">
-                        Rs.{price}
+                        ₹{price}
                       </span>
                       {detoxDisabled ? (
                         <span className="text-xs text-muted-foreground">
@@ -422,7 +422,7 @@ export default function BuildMyIrieDayPage() {
                                 </p>
                               </div>
                               <span className="text-sm font-semibold text-forest whitespace-nowrap">
-                                Rs.{price}
+                                ₹{price}
                               </span>
                             </div>
                           );
@@ -467,7 +467,7 @@ export default function BuildMyIrieDayPage() {
                                 </p>
                               </div>
                               <span className="text-sm font-semibold text-forest whitespace-nowrap">
-                                Rs.{price}
+                                ₹{price}
                               </span>
                             </div>
                           );
@@ -495,7 +495,7 @@ export default function BuildMyIrieDayPage() {
                               {mc?.shortName}
                             </p>
                             <span className="text-sm font-semibold text-forest whitespace-nowrap">
-                              Rs.{price}
+                              ₹{price}
                             </span>
                           </div>
                         );
@@ -509,7 +509,7 @@ export default function BuildMyIrieDayPage() {
                       Daily Total
                     </span>
                     <span className="text-lg font-bold text-forest">
-                      Rs.{dailyTotal}
+                      ₹{dailyTotal}
                     </span>
                   </div>
                   <p className="text-xs text-muted-foreground">

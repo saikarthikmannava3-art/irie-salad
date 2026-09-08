@@ -13,7 +13,7 @@ const MEAL_NAMES = [
   "Roti Sabzi Thali",
   "Hyderabadi Veg Dum Biryani",
   "Mixed Sprout Chaat",
-  "Signature IRIE Salad (350g)",
+  "signature irie salad (350g)",
   "Light Moong Dal Khichdi",
   "Coconut Overnight Oats",
   "Idli Sambar",
@@ -172,7 +172,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
       <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-6">
         <StatCard title="Total Orders" value={orders.length} icon={<ShoppingBag size={20} />} />
         <StatCard title="Delivered" value={deliveredCount} icon={<Calendar size={20} />} />
-        <StatCard title="Total Spent" value={`Rs.${totalSpent.toLocaleString()}`} icon={<Mail size={20} />} />
+        <StatCard title="Total Spent" value={`₹${totalSpent.toLocaleString()}`} icon={<Mail size={20} />} />
         <StatCard title="Sign-ins" value={customer.signInCount} icon={<Shield size={20} />} />
       </div>
 
@@ -201,7 +201,7 @@ export default function CustomerDetailPage({ params }: { params: Promise<{ id: s
                   <td className="px-4 py-3 font-mono text-xs">{order.orderNo}</td>
                   <td className="px-4 py-3 text-muted-foreground">{order.date}</td>
                   <td className="px-4 py-3">{order.salad}</td>
-                  <td className="px-4 py-3 text-right font-medium">Rs.{order.amount}</td>
+                  <td className="px-4 py-3 text-right font-medium">₹{order.amount}</td>
                   <td className="px-4 py-3">
                     <Badge
                       variant={order.status === "delivered" ? "success" : order.status === "skipped" ? "default" : "warning"}
