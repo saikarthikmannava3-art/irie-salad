@@ -26,7 +26,7 @@ const PLANS_PREVIEW = [
     days: 3,
     price: 747,
     perMeal: 249,
-    features: ["3 fresh meals", "Free delivery", "No commitment"],
+    features: ["3 fresh meals", "Free delivery", "Full menu access"],
     popular: false,
   },
   {

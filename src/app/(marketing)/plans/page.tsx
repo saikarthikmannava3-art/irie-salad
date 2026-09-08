@@ -25,7 +25,7 @@ const PLANS = [
       "3 fresh meals",
       "Free delivery",
       "Choose from full menu",
-      "No commitment required",
+      "Full menu access",
     ],
     popular: false,
     cta: "Try Now",
