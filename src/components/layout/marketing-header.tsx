@@ -30,7 +30,7 @@ export function MarketingHeader() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-50 border-b border-border bg-white/95 backdrop-blur">
+    <header className="sticky top-0 z-50 border-b border-border bg-cream-light/95 backdrop-blur">
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
@@ -55,7 +55,7 @@ export function MarketingHeader() {
                 </button>
                 {menuDropdownOpen && (
                   <div
-                    className="absolute left-0 top-full mt-2 w-48 rounded-lg border border-border bg-white py-2 shadow-lg"
+                    className="absolute left-0 top-full mt-2 w-48 rounded-lg border border-border bg-cream-light py-2 shadow-lg"
                     onMouseLeave={() => setMenuDropdownOpen(false)}
                   >
                     <Link
@@ -112,7 +112,7 @@ export function MarketingHeader() {
 
       {/* Mobile Menu */}
       {mobileOpen && (
-        <div className="md:hidden border-t border-border bg-white px-4 py-4 space-y-1">
+        <div className="md:hidden border-t border-border bg-cream-light px-4 py-4 space-y-1">
           {NAV_ITEMS.marketing.map((item) =>
             item.label === "Menu" ? (
               <div key={item.href}>
