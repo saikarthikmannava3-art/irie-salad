@@ -84,7 +84,7 @@ export default function HomePage() {
       <OrganizationJsonLd />
       <MarketingHeader />
       <main className="flex-1">
-        {/* Hero — food-first */}
+        {/* Hero: food-first */}
         <section className="relative overflow-hidden bg-cream">
           <div className="mx-auto max-w-7xl px-4 py-16 sm:px-6 lg:px-8 lg:py-24">
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
@@ -174,7 +174,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* Daily Menu — makes the site feel alive */}
+        {/* Daily Menu: makes the site feel alive */}
         <section className="py-16 bg-white">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">
@@ -286,7 +286,7 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* From our kitchen — process */}
+        {/* From our kitchen: process */}
         <section className="py-16 bg-forest">
           <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
             <div className="text-center mb-12">

@@ -12,7 +12,7 @@ export default function AddressPage() {
     label: "Home",
     line1: "",
     line2: "",
-    city: "Bangalore",
+    city: "Hyderabad",
     state: "Karnataka",
     pincode: "",
   });

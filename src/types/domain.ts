@@ -44,8 +44,8 @@ export type InventoryWithIngredient = Inventory & {
 export type Role = Profile["role"];
 
 // === IRIE Product Catalog Types (Phase 1: hardcoded data) - LEGACY ===
-// These types are kept for backward compatibility during the IRIE Salad to IRIE Kitchen transition.
-// New code should use the IRIE Kitchen types below.
+// These types are kept for backward compatibility during the irie salad to irie kitchen transition.
+// New code should use the irie kitchen types below.
 
 export type LegacyProductSlug =
   | "signature-irie-salad"
@@ -128,7 +128,7 @@ export interface LegacyOrderItem {
   packageId?: string;
 }
 
-// === IRIE Kitchen Types ===
+// === irie kitchen types ===
 
 export type MealOccasion = "breakfast" | "lunch" | "evening-snack" | "dinner";
 

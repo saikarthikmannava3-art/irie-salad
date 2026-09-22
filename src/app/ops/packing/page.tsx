@@ -30,7 +30,7 @@ interface PackageItem extends Record<string, unknown> {
   };
 }
 
-// Demo data with IRIE Kitchen meal names
+// Demo data with irie kitchen meal names
 const INITIAL_PACKAGES: PackageItem[] = [
   {
     id: "IR1234-P01", orderId: "IR1234", customer: "Kiran", packageNum: "1/4",

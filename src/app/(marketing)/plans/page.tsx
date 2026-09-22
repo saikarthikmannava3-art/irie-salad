@@ -100,7 +100,7 @@ const PLAN_FAQS = [
   { question: "Can I pause my subscription?", answer: "Absolutely. Pause and resume anytime from your dashboard. Remaining meals stay safe." },
   { question: "What areas do you deliver to?", answer: "We currently deliver across Hyderabad. Enter your pincode during checkout to confirm availability." },
   { question: "When are meals delivered?", answer: "We deliver twice daily: Morning delivery (breakfast & lunch) between 6:30–8:30 AM, and Evening delivery (snack & dinner) between 4:30–6:30 PM." },
-  { question: "Can I cancel my subscription?", answer: "To ensure the best experience, cancellations are handled by our support team. Please contact us and we will assist you." },
+  { question: "Can I cancel my subscription?", answer: "irie kitchen subscriptions are fixed-duration prepaid plans. Once purchased, the plan runs for its full duration. For any exceptional situations, please contact our support team." },
 ];
 
 export default function PlansPage() {

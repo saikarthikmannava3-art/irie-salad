@@ -1,4 +1,4 @@
-// LEGACY: This file is kept for backward compatibility during the IRIE Salad to IRIE Kitchen transition.
+// LEGACY: This file is kept for backward compatibility during the irie salad to irie kitchen transition.
 // New code should use recipes.ts and meal-categories.ts instead.
 // Do not add new products here. Add recipes to src/data/recipes.ts and meal categories to src/data/meal-categories.ts.
 

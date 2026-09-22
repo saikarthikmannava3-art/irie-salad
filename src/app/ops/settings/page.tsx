@@ -15,8 +15,8 @@ export default function SettingsPage() {
         <div className="space-y-4 max-w-md">
           <Input label="Organization Name" defaultValue="Irie Foods Pvt Ltd" />
           <Input label="Brand Name" defaultValue="irie kitchen" />
-          <Input label="Support Email" defaultValue="help@iriekitchen.com" />
-          <Input label="Support Phone" defaultValue="+91 98765 43210" />
+          <Input label="Support Email" defaultValue="iriesaladbar@gmail.com" />
+          <Input label="Support Phone" defaultValue="+91 9657104014" />
           <Button size="sm">Save</Button>
         </div>
       </Card>
@@ -26,7 +26,7 @@ export default function SettingsPage() {
         <div className="space-y-4 max-w-md">
           <Input label="Kitchen Name" defaultValue="HSR Kitchen" />
           <Input label="Kitchen Code" defaultValue="BLR-HSR-01" />
-          <Input label="City" defaultValue="Bangalore" />
+          <Input label="City" defaultValue="Hyderabad" />
           <Input label="Max Daily Capacity" defaultValue="200" type="number" />
           <Input label="Cutoff Time (24h)" defaultValue="18:00" type="time" />
           <Button size="sm">Save</Button>

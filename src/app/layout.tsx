@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import { GoogleTagManager, GoogleTagManagerNoscript } from "@/components/analytics/gtm";
-import { GoogleAnalytics } from "@/components/analytics/ga4";
+import { GoogleAnalytics, GTMNoScript } from "@/components/analytics/google-analytics";
 import "./globals.css";
 
 const SITE_URL = process.env.NEXT_PUBLIC_APP_URL || "https://iriekitchen.in";
@@ -76,11 +75,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <head>
-        <GoogleTagManager />
         <GoogleAnalytics />
       </head>
       <body className="min-h-full flex flex-col">
-        <GoogleTagManagerNoscript />
+        <GTMNoScript />
         {children}
       </body>
     </html>

@@ -9,13 +9,13 @@ import { MapPin, Plus, Trash2 } from "lucide-react";
 export default function ProfilePage() {
   const [profile, setProfile] = useState({
     name: "Demo User",
-    email: "demo@iriesalad.com",
-    phone: "+91 98765 43210",
+    email: "demo@iriekitchen.in",
+    phone: "+91 9657104014",
   });
 
   const [addresses] = useState([
-    { id: "1", label: "Home", line1: "123 HSR Layout, Sector 1", city: "Bangalore", pincode: "560102", isDefault: true },
-    { id: "2", label: "Work", line1: "456 Koramangala, 5th Block", city: "Bangalore", pincode: "560095", isDefault: false },
+    { id: "1", label: "Home", line1: "Plot 42, Jubilee Hills", city: "Hyderabad", pincode: "500034", isDefault: true },
+    { id: "2", label: "Work", line1: "Tower B, Raheja Mindspace, Madhapur", city: "Hyderabad", pincode: "500081", isDefault: false },
   ]);
 
   return (

@@ -4,7 +4,7 @@ import type { DeliveryWindow, FulfillmentWindow, MealOccasion } from "@/types/do
 export const CUTOFF_HOUR = 18; // 6 PM IST, morning delivery cutoff
 export const CUTOFF_MINUTE = 0;
 
-// === IRIE Kitchen: Dual Fulfillment Windows ===
+// === irie kitchen: Dual Fulfillment Windows ===
 
 export const FULFILLMENT_WINDOWS: FulfillmentWindow[] = [
   {

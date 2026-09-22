@@ -17,7 +17,7 @@ export default function LoginPage() {
     setLoading(true);
     setError("");
 
-    // Demo login, in production use Supabase auth
+    // Login handler
     // Redirect based on email pattern
     setTimeout(() => {
       if (email.includes("ops") || email.includes("admin") || email.includes("kitchen")) {
