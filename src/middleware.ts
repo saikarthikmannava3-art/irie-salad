@@ -1,15 +1,17 @@
 import { type NextRequest, NextResponse } from "next/server";
 import { updateSession } from "@/lib/supabase/middleware";
 
-const PUBLIC_PATHS = ["/", "/menu", "/plans", "/about", "/login", "/signup", "/callback"];
+const PUBLIC_PATHS = ["/", "/menu", "/plans", "/about", "/login", "/signup", "/logout", "/auth/callback", "/how-it-works", "/food-standard", "/locations"];
 
 export async function middleware(request: NextRequest) {
   const { pathname } = request.nextUrl;
 
-  // POC: If Supabase not configured, allow all routes
+  // If Supabase is not configured, allow all routes (demo mode)
   if (
     !process.env.NEXT_PUBLIC_SUPABASE_URL ||
-    process.env.NEXT_PUBLIC_SUPABASE_URL === "your-supabase-url"
+    process.env.NEXT_PUBLIC_SUPABASE_URL === "your-supabase-url" ||
+    process.env.NEXT_PUBLIC_SUPABASE_URL === "your-project-url" ||
+    process.env.NEXT_PUBLIC_SUPABASE_URL.includes("placeholder")
   ) {
     return NextResponse.next();
   }
